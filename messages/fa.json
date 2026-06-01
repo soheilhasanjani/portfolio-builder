@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "contact": "تماس",
+    "about": "درباره من",
+    "skills": "استک",
+    "domains": "حوزه‌های کاری",
+    "experience": "سابقه کاری",
+    "education": "تحصیلات",
+    "services": "خدمات"
+  },
+  "hero": {
+    "greeting": "سلام، من {name} هستم"
+  },
+  "profileStatus": {
+    "open_to_work": "آماده همکاری",
+    "hiring": "در حال استخدام",
+    "unavailable": "در دسترس نیستم"
+  },
+  "contact": {
+    "email": "ایمیل",
+    "phone": "تلفن",
+    "github": "گیت‌هاب",
+    "linkedin": "لینکدین",
+    "telegram": "تلگرام"
+  },
+  "about": {
+    "topSkills": "مهارت‌های برتر"
+  },
+  "profile": {
+    "website": "وبسایت"
+  },
+  "experience": {
+    "present": "اکنون"
+  },
+  "education": {
+    "sectionTitle": "تحصیلات",
+    "degree": "مقطع",
+    "fieldOfStudy": "رشته تحصیلی",
+    "grade": "معدل",
+    "activities": "فعالیت‌ها و انجمن‌ها",
+    "description": "توضیحات",
+    "skills": "مهارت‌ها"
+  },
+  "employmentType": {
+    "full_time": "تمام‌وقت",
+    "part_time": "پاره‌وقت",
+    "self_employed": "خوداشتغال",
+    "freelance": "فریلنسر",
+    "contract": "قراردادی",
+    "internship": "کارآموزی",
+    "apprenticeship": "شاگردی",
+    "seasonal": "فصلی"
+  },
+  "locationType": {
+    "on_site": "حضوری",
+    "hybrid": "ترکیبی",
+    "remote": "ریموت"
+  }
+}

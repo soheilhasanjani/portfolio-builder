@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "contact": "Contact",
+    "about": "About",
+    "skills": "Stack",
+    "domains": "Domains",
+    "experience": "Experience",
+    "education": "Education",
+    "services": "Services"
+  },
+  "hero": {
+    "greeting": "Hello, I'm {name}"
+  },
+  "profileStatus": {
+    "open_to_work": "Open to Work",
+    "hiring": "Hiring",
+    "unavailable": "Unavailable"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram"
+  },
+  "about": {
+    "topSkills": "Top Skills"
+  },
+  "profile": {
+    "website": "Website"
+  },
+  "experience": {
+    "present": "Present"
+  },
+  "education": {
+    "sectionTitle": "Education",
+    "degree": "Degree",
+    "fieldOfStudy": "Field of study",
+    "grade": "Grade",
+    "activities": "Activities and societies",
+    "description": "Description",
+    "skills": "Skills"
+  },
+  "employmentType": {
+    "full_time": "Full-time",
+    "part_time": "Part-time",
+    "self_employed": "Self-employed",
+    "freelance": "Freelance",
+    "contract": "Contract",
+    "internship": "Internship",
+    "apprenticeship": "Apprenticeship",
+    "seasonal": "Seasonal"
+  },
+  "locationType": {
+    "on_site": "On-site",
+    "hybrid": "Hybrid",
+    "remote": "Remote"
+  }
+}
