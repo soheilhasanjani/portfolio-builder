@@ -56,7 +56,7 @@ export interface Profile {
 
 export interface About {
   summary: string;
-  top_skills: string[];
+  top_stacks: string[];
 }
 
 export interface Experience {
@@ -73,7 +73,7 @@ export interface Experience {
     end: string;
   };
   description?: string;
-  skills?: string[];
+  stacks?: string[];
   responsibilities?: string[];
   children?: Omit<Experience, "children">[];
 }
@@ -89,7 +89,7 @@ export interface Education {
   grade?: string;
   activities?: string;
   description?: string;
-  skills: string[];
+  stacks: string[];
 }
 
 export interface FeaturedProject {

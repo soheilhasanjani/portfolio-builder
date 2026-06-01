@@ -51,7 +51,7 @@ const en: Portfolio = {
   about: {
     summary:
       "Frontend developer with 8–9 years of professional experience building scalable web applications. Background in financial (Crypto/Forex), e-commerce, enterprise, and data-driven platforms. Limited but real backend experience with NestJS and Prisma.",
-    top_skills: [
+    top_stacks: [
       "javascript",
       "typescript",
       "react",
@@ -97,7 +97,7 @@ const en: Portfolio = {
           title: "Hoopoe EMR",
           description:
             "Next-generation EMR for luxury wellness clinics. Integrates booking, customer engagement, loyalty, real-time treatment tracking, and AI-assisted workflow automation aimed at reducing no-shows and improving staff productivity.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -110,7 +110,7 @@ const en: Portfolio = {
           title: "Hoopoe Diet",
           description:
             "AI-driven nutrition and lifestyle platform inside the Hoopoe ecosystem. Translates everyday actions — meals, training, sleep, recovery — into measurable, clinically validated outcomes, supported by an extensive library of professional training content.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -123,7 +123,7 @@ const en: Portfolio = {
           title: "Grishana",
           description:
             "Internal Hoopoe brand and project — the official distributor of Cutera — focused on aesthetics and dermatology products. Built the customer-facing surface for the brand.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -136,7 +136,7 @@ const en: Portfolio = {
           title: "Hoopoe Home Care",
           description:
             "In-home medical and aesthetic services product within the Hoopoe ecosystem, covering booking, support, and service delivery for at-home treatments in Dubai.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -161,13 +161,13 @@ const en: Portfolio = {
           title: "Coinlocally Exchange",
           description:
             "Main cryptocurrency exchange site. Contributed to a micro-frontend setup and shipped seasonal themed experiences for events like Christmas and Halloween.",
-          skills: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
+          stacks: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
         },
         {
           title: "Coinlocally Forex",
           description:
             "Standalone forex-trading site built on the same stack as the main exchange.",
-          skills: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
+          stacks: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
         },
       ],
     },
@@ -185,7 +185,7 @@ const en: Portfolio = {
           title: "Wiki Knowledge Management Platform",
           description:
             "Wikipedia-style platform where contributors author content and a separate group of reviewers approves it for publication.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -198,7 +198,7 @@ const en: Portfolio = {
           title: "Message Engineering",
           description:
             "Social-network analysis platform built around cognitive-science parameters, with content generation for social channels and extensive analytical charting.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -211,7 +211,7 @@ const en: Portfolio = {
           title: "Robotics — Social Action Automation",
           description:
             "First-generation centralized platform that connects to social networks and lets operators manage accounts at scale (likes, comments, content generation, etc.) in a human-like fashion.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -229,7 +229,7 @@ const en: Portfolio = {
           title: "Campaign Management Platform",
           description:
             "Mobile-first PWA bundling training videos and messenger-channel broadcasting for campaign operators. Delivered as two applications — a client app for end users and an admin panel for content and operations.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -263,7 +263,7 @@ const en: Portfolio = {
           role: "Frontend Lead",
           description:
             "Cryptocurrency exchange web application. Led the frontend and, on delivery, executed a major refactor covering architecture, performance, and long-term maintainability.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -274,7 +274,7 @@ const en: Portfolio = {
         {
           title: "Dolphintex Corporate Website",
           description: "Marketing site for the Dolphintex exchange.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -298,7 +298,7 @@ const en: Portfolio = {
           title: "Local Influencers Platform",
           description:
             "Platform that lets influencers publish priced offers via shareable profile URLs (e.g. localinfluencers.io/bbc) and lets businesses book paid promotions in a few steps.",
-          skills: [
+          stacks: [
             "typescript",
             "react",
             "nextjs",
@@ -324,13 +324,13 @@ const en: Portfolio = {
           title: "Parsiz Teb Website",
           description:
             "Marketing site for the Parsiz Teb clinic and hospital management suite.",
-          skills: ["html5", "css3", "javascript", "jquery"],
+          stacks: ["html5", "css3", "javascript", "jquery"],
         },
         {
           title: "Parsiz Office Automation",
           description:
             "First professional React project — an enterprise office automation web app with a large feature surface and complex workflows. Owned the frontend end-to-end.",
-          skills: [
+          stacks: [
             "react",
             "redux",
             "react-query",
@@ -343,7 +343,7 @@ const en: Portfolio = {
           title: "Parsiz Corporate Website",
           description:
             "Corporate site presenting the company's full product portfolio.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
       ],
     },
@@ -361,30 +361,30 @@ const en: Portfolio = {
           title: "Eshgh o Choob",
           description:
             "E-commerce site for handcrafted wooden marquetry and engraving products. Implemented all storefront pages and delivered the markup for MVC integration.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Abar Rayane Corporate Website",
           description:
             "Designed and implemented the company's own corporate site end-to-end, including in-flight UI design (without Figma/Adobe XD).",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Daadyab",
           description:
             "Legal-tech platform connecting lawyers and clients for case referrals, lawyer comparison, and online consultations. Built the main site from Adobe XD designs.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Sazeh For You",
           description: "Landing page for an industrial-products manufacturer.",
-          skills: ["html5", "css3", "javascript", "jquery"],
+          stacks: ["html5", "css3", "javascript", "jquery"],
         },
         {
           title: "Babol Carpet",
           description:
             "Storefront and admin panel for a long-established carpet and tufted-moquette manufacturer that exports to 20+ countries.",
-          skills: ["html5", "css3", "javascript", "jquery"],
+          stacks: ["html5", "css3", "javascript", "jquery"],
         },
       ],
     },
@@ -402,7 +402,7 @@ const en: Portfolio = {
           role: "Full-Stack Developer",
           description:
             "End-to-end build of a cosmetics and personal-care e-commerce platform with a customer-facing storefront and a dedicated admin panel. Owned both frontend and backend.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -423,19 +423,19 @@ const en: Portfolio = {
           title: "AI Podcast & Audio Editing Platform",
           description:
             "AI-powered audio editing studio with a professional editor: upload an audio file, generate a transcript, then edit either the waveform or the transcript with bidirectional sync.",
-          skills: ["react", "vite", "typescript", "chakra-ui", "react-query"],
+          stacks: ["react", "vite", "typescript", "chakra-ui", "react-query"],
         },
         {
           title: "Driving-Assistance Object Detection Platform",
           description:
             "Web app that frame-splits driving video and lets users tag objects (e.g., 'white car'), then visualizes per-frame detections.",
-          skills: ["react", "typescript", "tailwindcss", "react-query"],
+          stacks: ["react", "typescript", "tailwindcss", "react-query"],
         },
         {
           title: "Cosmetics E-Commerce Site",
           description:
             "Storefront for a separate cosmetics and personal-care brand.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -447,13 +447,13 @@ const en: Portfolio = {
           title: "360° Interactive Storefront",
           description:
             "Differentiated e-commerce concept: 360°/panoramic views of retail spaces with clickable products throughout, giving customers an in-store feel from the browser.",
-          skills: ["nextjs", "react", "three", "mui", "gsap", "axios"],
+          stacks: ["nextjs", "react", "three", "mui", "gsap", "axios"],
         },
         {
           title: "Crypto Wallet Manager",
           description:
             "Self-custody-style platform for managing crypto wallets, transfers, and swaps. Not an exchange.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "redux",
@@ -464,17 +464,17 @@ const en: Portfolio = {
         {
           title: "Tabasgardi",
           description: "Landing-page-only project.",
-          skills: ["html5", "css3", "sass", "gulp"],
+          stacks: ["html5", "css3", "sass", "gulp"],
         },
         {
           title: "Hermes Shop",
           description: "Templated storefront frontend.",
-          skills: ["handlebars", "tailwindcss", "gulp"],
+          stacks: ["handlebars", "tailwindcss", "gulp"],
         },
         {
           title: "Quiz",
           description: "Interactive quiz interface with charts and carousel UI.",
-          skills: ["handlebars", "vite", "tailwindcss", "swiper", "chartjs"],
+          stacks: ["handlebars", "vite", "tailwindcss", "swiper", "chartjs"],
         },
       ],
     },
@@ -486,7 +486,7 @@ const en: Portfolio = {
       degree: "Bachelor's degree",
       field_of_study: "Computer Software Engineering",
       period: { start: "2017-09", end: "2021-08" },
-      skills: ["javascript", "html5", "css3", "git"],
+      stacks: ["javascript", "html5", "css3", "git"],
     },
   ],
 

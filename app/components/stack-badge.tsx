@@ -1,27 +1,27 @@
 import Image from "next/image";
-import { getSkillIconPath, getSkillInvertOnDark, getSkillLabel } from "../data/skills";
+import { getStackIconPath, getStackInvertOnDark, getStackLabel } from "../data/stacks";
 import { cn } from "../../lib/utils";
 
-type SkillBadgeVariant = "circle" | "rectangle";
+type StackBadgeVariant = "circle" | "rectangle";
 
 interface Props {
   code: string;
-  variant?: SkillBadgeVariant;
+  variant?: StackBadgeVariant;
   badgeClassName?: string;
   iconSize?: number;
   isGrayscale?: boolean;
 }
 
-export function SkillBadge({
+export function StackBadge({
   code,
   variant = "rectangle",
   badgeClassName,
   iconSize,
   isGrayscale = false,
 }: Props) {
-  const iconPath = getSkillIconPath(code);
-  const label = getSkillLabel(code);
-  const invertOnDark = getSkillInvertOnDark(code);
+  const iconPath = getStackIconPath(code);
+  const label = getStackLabel(code);
+  const invertOnDark = getStackInvertOnDark(code);
 
   const iconClassName = cn(
     "transition duration-200",

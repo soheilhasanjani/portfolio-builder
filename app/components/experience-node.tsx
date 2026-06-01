@@ -1,5 +1,5 @@
 import type { Experience } from "../data/types";
-import { SkillBadge } from "./skill-badge";
+import { StackBadge } from "./stack-badge";
 import User from "@geist-ui/icons/user";
 import Clock from "@geist-ui/icons/clock";
 import MapPin from "@geist-ui/icons/mapPin";
@@ -98,10 +98,10 @@ function ChildEntry({
         </ul>
       )}
 
-      {child.skills && child.skills.length > 0 && (
+      {child.stacks && child.stacks.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
-          {child.skills.map((code) => (
-            <SkillBadge
+          {child.stacks.map((code) => (
+            <StackBadge
               key={code}
               code={code}
               badgeClassName={badgeSm}
@@ -179,10 +179,10 @@ export function ExperienceNode({
         </ul>
       )}
 
-      {exp.skills && exp.skills.length > 0 && (
+      {exp.stacks && exp.stacks.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
-          {exp.skills.map((code) => (
-            <SkillBadge
+          {exp.stacks.map((code) => (
+            <StackBadge
               key={code}
               code={code}
               badgeClassName={badgeSm}

@@ -2,7 +2,7 @@
   "sections": {
     "contact": "Contact",
     "about": "About",
-    "skills": "Stack",
+    "stacks": "Stack",
     "domains": "Domains",
     "experience": "Experience",
     "education": "Education",
@@ -24,7 +24,7 @@
     "telegram": "Telegram"
   },
   "about": {
-    "topSkills": "Top Skills"
+    "topStacks": "Top Stacks"
   },
   "profile": {
     "website": "Website"
@@ -39,7 +39,7 @@
     "grade": "Grade",
     "activities": "Activities and societies",
     "description": "Description",
-    "skills": "Skills"
+    "stacks": "Stacks"
   },
   "employmentType": {
     "full_time": "Full-time",

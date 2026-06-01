@@ -1,6 +1,6 @@
 import type { Experience } from "./types";
 
-export interface SkillDef {
+export interface StackDef {
   code: string;
   label: string;
   iconPath: string | null;
@@ -13,7 +13,7 @@ function icon(file: string): string {
   return `${ICON_BASE}/${file}`;
 }
 
-export const SKILLS: SkillDef[] = [
+export const STACKS: StackDef[] = [
   // Frontend — Frameworks & Meta-frameworks
   { code: "react", label: "React", iconPath: icon("react.svg") },
   { code: "nextjs", label: "Next.js", iconPath: icon("nextjs.svg") },
@@ -40,21 +40,13 @@ export const SKILLS: SkillDef[] = [
   { code: "pinia", label: "Pinia", iconPath: null },
 
   // Data fetching
-  {
-    code: "react-query",
-    label: "React Query",
-    iconPath: icon("react-query.svg"),
-  },
+  { code: "react-query", label: "React Query", iconPath: icon("react-query.svg") },
   { code: "swr", label: "SWR", iconPath: icon("swr.svg") },
   { code: "apollo", label: "Apollo Client", iconPath: null },
   { code: "axios", label: "Axios", iconPath: icon("axios.svg") },
 
   // UI libraries
-  {
-    code: "tailwindcss",
-    label: "Tailwind CSS",
-    iconPath: icon("tailwindcss.svg"),
-  },
+  { code: "tailwindcss", label: "Tailwind CSS", iconPath: icon("tailwindcss.svg") },
   { code: "mui", label: "Material UI", iconPath: icon("mui.svg") },
   { code: "shadcn-ui", label: "Shadcn UI", iconPath: icon("shadcn-ui.svg"), invertOnDark: true },
   { code: "chakra-ui", label: "Chakra UI", iconPath: icon("chakra-ui.svg") },
@@ -67,19 +59,11 @@ export const SKILLS: SkillDef[] = [
   { code: "swiper", label: "Swiper", iconPath: icon("swiper.svg") },
 
   // Forms & validation
-  {
-    code: "react-hook-form",
-    label: "React Hook Form",
-    iconPath: icon("react-hook-form.svg"),
-  },
+  { code: "react-hook-form", label: "React Hook Form", iconPath: icon("react-hook-form.svg") },
   { code: "zod", label: "Zod", iconPath: icon("zod.png") },
 
   // Data viz & tables
-  {
-    code: "tanstack-table",
-    label: "TanStack Table",
-    iconPath: icon("tanstack.png"),
-  },
+  { code: "tanstack-table", label: "TanStack Table", iconPath: icon("tanstack.png") },
   { code: "nivo", label: "Nivo Charts", iconPath: null },
   { code: "d3", label: "D3.js", iconPath: icon("d3.svg") },
   { code: "chartjs", label: "Chart.js", iconPath: icon("chartjs.svg") },
@@ -120,11 +104,7 @@ export const SKILLS: SkillDef[] = [
 
   // Special frontend targets
   { code: "pwa", label: "PWA", iconPath: icon("pwa.svg"), invertOnDark: true },
-  {
-    code: "chrome-extension",
-    label: "Chrome Extension",
-    iconPath: icon("chrome-extension.svg"),
-  },
+  { code: "chrome-extension", label: "Chrome Extension", iconPath: icon("chrome-extension.svg") },
   { code: "micro-frontends", label: "Micro-Frontends", iconPath: null },
 
   // Backend — Runtime & frameworks
@@ -176,28 +156,21 @@ export const SKILLS: SkillDef[] = [
   { code: "bullmq", label: "BullMQ", iconPath: null },
 ];
 
-export const skillMap = new Map(SKILLS.map((s) => [s.code, s]));
+export const stackMap = new Map(STACKS.map((s) => [s.code, s]));
 
-export function getSkillLabel(code: string): string {
-  return skillMap.get(code)?.label ?? code;
+export function getStackLabel(code: string): string {
+  return stackMap.get(code)?.label ?? code;
 }
 
-export function getSkillIconPath(code: string): string | null {
-  return skillMap.get(code)?.iconPath ?? null;
+export function getStackIconPath(code: string): string | null {
+  return stackMap.get(code)?.iconPath ?? null;
 }
 
-export function getSkillInvertOnDark(code: string): boolean {
-  return skillMap.get(code)?.invertOnDark ?? false;
+export function getStackInvertOnDark(code: string): boolean {
+  return stackMap.get(code)?.invertOnDark ?? false;
 }
 
-/**
- * Walks an Experience tree and returns every skill code referenced, deduped
- * in first-seen order. Used to derive the Skills section from the source of
- * truth (the experience list) so we don't maintain a duplicate static list.
- */
-export function collectSkillsFromExperience(
-  experience: Experience[],
-): string[] {
+export function collectStacksFromExperience(experience: Experience[]): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
 
@@ -212,9 +185,9 @@ export function collectSkillsFromExperience(
   };
 
   for (const exp of experience) {
-    visit(exp.skills);
+    visit(exp.stacks);
     if (exp.children) {
-      for (const child of exp.children) visit(child.skills);
+      for (const child of exp.children) visit(child.stacks);
     }
   }
 

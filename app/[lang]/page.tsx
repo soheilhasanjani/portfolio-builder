@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import { getData, hasLocale } from "./dictionaries";
-import { collectSkillsFromExperience } from "../data/skills";
+import { collectStacksFromExperience } from "../data/stacks";
 import { cn } from "../../lib/utils";
 import { FloatingButtons } from "../components/floating-buttons";
 import { HeroSection } from "../components/sections/hero-section";
 import { AboutSection } from "../components/sections/about-section";
-import { SkillsSection } from "../components/sections/skills-section";
+import { StacksSection } from "../components/sections/stacks-section";
 import { DomainsSection } from "../components/sections/domains-section";
 import { ExperienceSection } from "../components/sections/experience-section";
 import { EducationSection } from "../components/sections/education-section";
@@ -22,7 +22,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
 
   const data = await getData(lang);
   const { profile, about, domains, services, experience, education } = data;
-  const allSkills = collectSkillsFromExperience(experience);
+  const allStacks = collectStacksFromExperience(experience);
   const dir = lang === "fa" ? "rtl" : "ltr";
 
   return (
@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
       <main dir={dir} className={cn("sans max-w-3xl mx-auto px-6 py-16 space-y-16")}>
         <HeroSection profile={profile} />
         <AboutSection about={about} />
-        <SkillsSection skills={allSkills} />
+        <StacksSection stacks={allStacks} />
         <DomainsSection domains={domains} />
         <ExperienceSection experience={experience} lang={lang} />
         <EducationSection education={education} lang={lang} />

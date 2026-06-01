@@ -51,7 +51,7 @@ const fa: Portfolio = {
   about: {
     summary:
       "توسعه‌دهنده فرانت‌اند با بیش از ۸ تا ۹ سال تجربه حرفه‌ای در ساخت وب‌اپلیکیشن‌های مقیاس‌پذیر. تجربه کار در پروژه‌های مالی (Crypto/Forex)، فروشگاهی، سازمانی و پلتفرم‌های داده‌محور. تجربه محدود ولی واقعی در بک‌اند با NestJS و Prisma.",
-    top_skills: [
+    top_stacks: [
       "javascript",
       "typescript",
       "react",
@@ -97,7 +97,7 @@ const fa: Portfolio = {
           title: "Hoopoe EMR",
           description:
             "پلتفرم نسل بعدی EMR ویژه‌ی کلینیک‌های لاکچری wellness. ادغام رزرواسیون، تعامل با مشتری، باشگاه مشتریان، رهگیری زنده‌ی تریتمنت‌ها و اتوماسیون فرایندها به کمک هوش مصنوعی با هدف کاهش no-show و افزایش بهره‌وری تیم.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -110,7 +110,7 @@ const fa: Portfolio = {
           title: "Hoopoe Diet",
           description:
             "پلتفرم تغذیه و سبک زندگی مبتنی بر هوش مصنوعی در اکوسیستم Hoopoe. اقدامات روزانه‌ی کاربر — وعده‌های غذایی، تمرین، خواب و ریکاوری — را به خروجی‌های قابل اندازه‌گیری و از نظر بالینی معتبر تبدیل می‌کند و از کتابخانه‌ی گسترده‌ای از محتوای آموزشی حرفه‌ای پشتیبانی می‌گیرد.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -123,7 +123,7 @@ const fa: Portfolio = {
           title: "Grishana",
           description:
             "برند و پروژه‌ی داخلی Hoopoe و توزیع‌کننده‌ی رسمی محصولات Cutera، با تمرکز بر محصولات زیبایی و درماتولوژی. توسعه‌ی سطح مشتری‌محور برند.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -136,7 +136,7 @@ const fa: Portfolio = {
           title: "Hoopoe Home Care",
           description:
             "محصول ارائه‌ی خدمات پزشکی و زیبایی در منزل در اکوسیستم Hoopoe، شامل رزرواسیون، پشتیبانی و ارائه‌ی خدمت برای درمان‌های در منزل در دبی.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -161,13 +161,13 @@ const fa: Portfolio = {
           title: "Coinlocally Exchange",
           description:
             "وب‌سایت اصلی صرافی ارز دیجیتال. مشارکت در ساختار Micro-Frontend و توسعه‌ی تجربه‌های فصلی و مناسبتی برای رویدادهایی همچون کریسمس و هالووین.",
-          skills: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
+          stacks: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
         },
         {
           title: "Coinlocally Forex",
           description:
             "وب‌سایت مستقل معاملات فارکس Coinlocally، با همان استک پلتفرم اصلی.",
-          skills: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
+          stacks: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
         },
       ],
     },
@@ -185,7 +185,7 @@ const fa: Portfolio = {
           title: "Wiki Knowledge Management Platform",
           description:
             "پلتفرمی مشابه ویکی‌پدیا که کاربران در آن محتوا تولید می‌کنند و گروهی مستقل از داوران، انتشار آن را تأیید می‌کنند.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -198,7 +198,7 @@ const fa: Portfolio = {
           title: "Message Engineering",
           description:
             "پلتفرم تحلیل شبکه‌های اجتماعی بر اساس پارامترهای علوم شناختی، به همراه تولید محتوا برای شبکه‌ها و نمودارهای تحلیلی گسترده.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -211,7 +211,7 @@ const fa: Portfolio = {
           title: "Robotics — Social Action Automation",
           description:
             "نسخه‌ی نخست یک پلتفرم متمرکز که به شبکه‌های اجتماعی متصل می‌شود و امکان مدیریت گسترده‌ی حساب‌ها (لایک، کامنت، تولید محتوا و …) را به شکلی انسان‌گونه فراهم می‌کند.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -229,7 +229,7 @@ const fa: Portfolio = {
           title: "Campaign Management Platform",
           description:
             "یک PWA با رویکرد mobile-first برای ارائه‌ی محتوای آموزشی ویدئویی و ارسال پیام به کانال‌های مسنجری. متشکل از دو اپلیکیشن جداگانه: اپ کاربر نهایی و پنل ادمین برای مدیریت محتوا و عملیات.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -263,7 +263,7 @@ const fa: Portfolio = {
           role: "Frontend Lead",
           description:
             "وب اپلیکیشن صرافی ارز دیجیتال. سرپرستی فرانت‌اند پروژه و انجام یک ریفکتور اساسی در زمان تحویل، شامل بازنگری معماری، بهینه‌سازی عملکرد و افزایش قابلیت نگهداری بلندمدت.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -274,7 +274,7 @@ const fa: Portfolio = {
         {
           title: "Dolphintex Corporate Website",
           description: "وب‌سایت معرفی صرافی Dolphintex.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -298,7 +298,7 @@ const fa: Portfolio = {
           title: "Local Influencers Platform",
           description:
             "پلتفرمی که به اینفلوئنسرها امکان می‌دهد پیشنهادهای قیمت‌دار خود را از طریق URL اختصاصی پروفایل (مانند localinfluencers.io/bbc) منتشر کنند و کسب‌وکارها بتوانند در چند مرحله، تبلیغ پولی رزرو نمایند.",
-          skills: [
+          stacks: [
             "typescript",
             "react",
             "nextjs",
@@ -324,13 +324,13 @@ const fa: Portfolio = {
           title: "Parsiz Teb Website",
           description:
             "وب‌سایت معرفی محصول مجموعه‌ی مدیریت کلینیک و بیمارستان پارسیز طب.",
-          skills: ["html5", "css3", "javascript", "jquery"],
+          stacks: ["html5", "css3", "javascript", "jquery"],
         },
         {
           title: "Parsiz Office Automation",
           description:
             "نخستین پروژه‌ی حرفه‌ای من با React؛ یک وب اپلیکیشن سازمانی اتوماسیون اداری با دامنه‌ی گسترده‌ی قابلیت‌ها و فرآیندهای پیچیده. مالکیت کامل سمت فرانت‌اند.",
-          skills: [
+          stacks: [
             "react",
             "redux",
             "react-query",
@@ -342,7 +342,7 @@ const fa: Portfolio = {
         {
           title: "Parsiz Corporate Website",
           description: "وب‌سایت شرکتی برای معرفی پورتفولیوی کامل محصولات.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
       ],
     },
@@ -360,30 +360,30 @@ const fa: Portfolio = {
           title: "Eshgh o Choob",
           description:
             "وب‌سایت فروشگاهی محصولات منبت و معرق چوبی دست‌ساز. تمامی صفحات فروشگاه را پیاده‌سازی کردم و خروجی را جهت یکپارچه‌سازی در ساختار MVC به تیم بک‌اند تحویل دادم.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Abar Rayane Corporate Website",
           description:
             "طراحی و پیاده‌سازی end-to-end وب‌سایت شرکتی به همراه طراحی UI درون‌پروژه‌ای، بدون استفاده از ابزارهایی نظیر Figma یا Adobe XD.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Daadyab",
           description:
             "پلتفرم لیگال‌تک برای ارتباط وکلا و موکلین، ارجاع پرونده، مقایسه‌ی وکلا و مشاوره‌ی آنلاین. وب‌سایت اصلی را بر اساس طراحی Adobe XD پیاده‌سازی کردم.",
-          skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
+          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Sazeh For You",
           description: "لندینگ پیج معرفی محصولات یک شرکت تولیدی صنعتی.",
-          skills: ["html5", "css3", "javascript", "jquery"],
+          stacks: ["html5", "css3", "javascript", "jquery"],
         },
         {
           title: "Babol Carpet",
           description:
             "وب‌سایت فروشگاه و پنل مدیریت یکی از تولیدکنندگان قدیمی فرش و موکت کشور با صادرات به بیش از ۲۰ کشور.",
-          skills: ["html5", "css3", "javascript", "jquery"],
+          stacks: ["html5", "css3", "javascript", "jquery"],
         },
       ],
     },
@@ -401,7 +401,7 @@ const fa: Portfolio = {
           role: "Full-Stack Developer",
           description:
             "پیاده‌سازی end-to-end یک پلتفرم فروشگاهی محصولات آرایشی و بهداشتی شامل وب‌سایت مشتری و پنل ادمین اختصاصی. مالکیت کامل سمت فرانت‌اند و بک‌اند.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -422,18 +422,18 @@ const fa: Portfolio = {
           title: "AI Podcast & Audio Editing Platform",
           description:
             "استودیوی ویرایش صوت مبتنی بر هوش مصنوعی با ادیتور حرفه‌ای: فایل صوتی آپلود می‌شود، متن آن تولید می‌گردد، و ویرایش به صورت دو طرفه میان waveform و متن همگام می‌شود.",
-          skills: ["react", "vite", "typescript", "chakra-ui", "react-query"],
+          stacks: ["react", "vite", "typescript", "chakra-ui", "react-query"],
         },
         {
           title: "Driving-Assistance Object Detection Platform",
           description:
             "وب اپلیکیشنی که ویدئوی رانندگی را به فریم تقسیم می‌کند و به کاربر امکان می‌دهد اشیاء مشخصی (مثلاً «خودروی سفید») را تگ‌گذاری کرده و تشخیص‌ها را در هر فریم مشاهده کند.",
-          skills: ["react", "typescript", "tailwindcss", "react-query"],
+          stacks: ["react", "typescript", "tailwindcss", "react-query"],
         },
         {
           title: "Cosmetics E-Commerce Site",
           description: "وب‌سایت فروشگاهی برای یک برند آرایشی و بهداشتی مستقل.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "typescript",
@@ -445,13 +445,13 @@ const fa: Portfolio = {
           title: "360° Interactive Storefront",
           description:
             "کانسپت متفاوت e-commerce: نمایش ۳۶۰ درجه/پانوراما از فضای فروشگاه با محصولات قابل کلیک در سرتاسر صحنه، تا کاربر تجربه‌ای نزدیک به حضور فیزیکی در فروشگاه داشته باشد.",
-          skills: ["nextjs", "react", "three", "mui", "gsap", "axios"],
+          stacks: ["nextjs", "react", "three", "mui", "gsap", "axios"],
         },
         {
           title: "Crypto Wallet Manager",
           description:
             "پلتفرمی self-custody-style برای مدیریت ولت‌های ارز دیجیتال، انتقال دارایی و Swap. صرافی نیست.",
-          skills: [
+          stacks: [
             "nextjs",
             "react",
             "redux",
@@ -462,17 +462,17 @@ const fa: Portfolio = {
         {
           title: "Tabasgardi",
           description: "پروژه‌ای صرفاً در حد لندینگ پیج.",
-          skills: ["html5", "css3", "sass", "gulp"],
+          stacks: ["html5", "css3", "sass", "gulp"],
         },
         {
           title: "Hermes Shop",
           description: "فرانت‌اند فروشگاهی مبتنی بر تمپلیت.",
-          skills: ["handlebars", "tailwindcss", "gulp"],
+          stacks: ["handlebars", "tailwindcss", "gulp"],
         },
         {
           title: "Quiz",
           description: "رابط تعاملی کوییز با نمودار و کاروسل.",
-          skills: ["handlebars", "vite", "tailwindcss", "swiper", "chartjs"],
+          stacks: ["handlebars", "vite", "tailwindcss", "swiper", "chartjs"],
         },
       ],
     },
@@ -484,7 +484,7 @@ const fa: Portfolio = {
       degree: "کارشناسی",
       field_of_study: "مهندسی نرم‌افزار کامپیوتر",
       period: { start: "2017-09", end: "2021-08" },
-      skills: ["javascript", "html5", "css3", "git"],
+      stacks: ["javascript", "html5", "css3", "git"],
     },
   ],
 

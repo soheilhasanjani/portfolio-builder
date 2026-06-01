@@ -1,9 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import Book from "@geist-ui/icons/book";
 import { type Education } from "../../data/types";
-import { getSkillLabel } from "../../data/skills";
+import { getStackLabel } from "../../data/stacks";
 import { formatMonthYear } from "../../../lib/date";
-import { sectionTitle, badgeSm } from "../../tokens";
+import { badgeSm } from "../../tokens";
+import { Section } from "../section";
 
 function toSortKey(date: string) {
   return date === "present" ? "9999-99" : date;
@@ -29,16 +30,13 @@ export async function EducationSection({
   );
 
   function formatPeriod(date: string) {
-    return date === "present" ? tExperience("present") : formatMonthYear(date, lang);
+    return date === "present"
+      ? tExperience("present")
+      : formatMonthYear(date, lang);
   }
 
   return (
-    <section className="space-y-6">
-      <h2 className={sectionTitle}>
-        <Book size={12} />
-        {tSections("education")}
-      </h2>
-
+    <Section icon={<Book size={12} />} title={tSections("education")}>
       {sorted.map((edu, i) => (
         <div key={i} className="space-y-2">
           <div>
@@ -55,7 +53,8 @@ export async function EducationSection({
 
           {edu.grade && (
             <p className="text-sm text-[#4d4d4d] dark:text-[#a1a1a1]">
-              <span className="mono text-[#888888]">{tEdu("grade")}:</span> {edu.grade}
+              <span className="mono text-[#888888]">{tEdu("grade")}:</span>{" "}
+              {edu.grade}
             </p>
           )}
 
@@ -72,17 +71,17 @@ export async function EducationSection({
             </p>
           )}
 
-          {edu.skills.length > 0 && (
+          {edu.stacks.length > 0 && (
             <div className="flex flex-wrap gap-2">
-              {edu.skills.map((code) => (
+              {edu.stacks.map((code) => (
                 <span key={code} className={badgeSm}>
-                  {getSkillLabel(code)}
+                  {getStackLabel(code)}
                 </span>
               ))}
             </div>
           )}
         </div>
       ))}
-    </section>
+    </Section>
   );
 }

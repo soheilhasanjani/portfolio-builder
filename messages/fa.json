@@ -2,7 +2,7 @@
   "sections": {
     "contact": "تماس",
     "about": "درباره من",
-    "skills": "استک",
+    "stacks": "استک",
     "domains": "حوزه‌های کاری",
     "experience": "سابقه کاری",
     "education": "تحصیلات",
@@ -24,7 +24,7 @@
     "telegram": "تلگرام"
   },
   "about": {
-    "topSkills": "مهارت‌های برتر"
+    "topStacks": "استک‌های برتر"
   },
   "profile": {
     "website": "وبسایت"
@@ -39,7 +39,7 @@
     "grade": "معدل",
     "activities": "فعالیت‌ها و انجمن‌ها",
     "description": "توضیحات",
-    "skills": "مهارت‌ها"
+    "stacks": "استک‌ها"
   },
   "employmentType": {
     "full_time": "تمام‌وقت",
