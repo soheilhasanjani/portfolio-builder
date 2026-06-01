@@ -83,14 +83,6 @@ const fa: Portfolio = {
       period: { start: "2025-06", end: "2026-01" },
       description:
         "برند پریمیوم در حوزه‌ی لاغری، زیبایی و wellness با حضور گسترده در امارات، در حال ساخت یک اکوسیستم محصول یکپارچه شامل EMR، تغذیه، توزیع و خدمات درمانی در منزل.",
-      skills: [
-        "nextjs",
-        "react",
-        "typescript",
-        "react-query",
-        "zustand",
-        "axios",
-      ],
       responsibilities: [
         "توسعه و نگهداری معماری مقیاس‌پذیر فرانت‌اند",
         "طراحی و پیاده‌سازی کامپوننت‌های UI و ماژول‌های کاربردی قابل استفاده‌ی مجدد",
@@ -103,7 +95,6 @@ const fa: Portfolio = {
       children: [
         {
           title: "Hoopoe EMR",
-          period: { start: "2025-06", end: "2026-01" },
           description:
             "پلتفرم نسل بعدی EMR ویژه‌ی کلینیک‌های لاکچری wellness. ادغام رزرواسیون، تعامل با مشتری، باشگاه مشتریان، رهگیری زنده‌ی تریتمنت‌ها و اتوماسیون فرایندها به کمک هوش مصنوعی با هدف کاهش no-show و افزایش بهره‌وری تیم.",
           skills: [
@@ -117,7 +108,6 @@ const fa: Portfolio = {
         },
         {
           title: "Hoopoe Diet",
-          period: { start: "2025-06", end: "2026-01" },
           description:
             "پلتفرم تغذیه و سبک زندگی مبتنی بر هوش مصنوعی در اکوسیستم Hoopoe. اقدامات روزانه‌ی کاربر — وعده‌های غذایی، تمرین، خواب و ریکاوری — را به خروجی‌های قابل اندازه‌گیری و از نظر بالینی معتبر تبدیل می‌کند و از کتابخانه‌ی گسترده‌ای از محتوای آموزشی حرفه‌ای پشتیبانی می‌گیرد.",
           skills: [
@@ -131,7 +121,6 @@ const fa: Portfolio = {
         },
         {
           title: "Grishana",
-          period: { start: "2025-06", end: "2026-01" },
           description:
             "برند و پروژه‌ی داخلی Hoopoe و توزیع‌کننده‌ی رسمی محصولات Cutera، با تمرکز بر محصولات زیبایی و درماتولوژی. توسعه‌ی سطح مشتری‌محور برند.",
           skills: [
@@ -145,7 +134,6 @@ const fa: Portfolio = {
         },
         {
           title: "Hoopoe Home Care",
-          period: { start: "2025-06", end: "2026-01" },
           description:
             "محصول ارائه‌ی خدمات پزشکی و زیبایی در منزل در اکوسیستم Hoopoe، شامل رزرواسیون، پشتیبانی و ارائه‌ی خدمت برای درمان‌های در منزل در دبی.",
           skills: [
@@ -168,26 +156,15 @@ const fa: Portfolio = {
       period: { start: "2024-11", end: "2025-06" },
       description:
         "بروکر تأییدشده‌ی Bybit با ارائه‌ی خدمات معامله و سرمایه‌گذاری در حوزه‌های Spot، Demo، Copy Trading و Bot Trading، و مسیرهای آنبوردینگ از سطح مبتدی تا حرفه‌ای.",
-      skills: [
-        "nextjs",
-        "react",
-        "typescript",
-        "redux",
-        "ant-design",
-        "tailwindcss",
-        "micro-frontends",
-      ],
       children: [
         {
           title: "Coinlocally Exchange",
-          period: { start: "2024-11", end: "2025-06" },
           description:
             "وب‌سایت اصلی صرافی ارز دیجیتال. مشارکت در ساختار Micro-Frontend و توسعه‌ی تجربه‌های فصلی و مناسبتی برای رویدادهایی همچون کریسمس و هالووین.",
           skills: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
         },
         {
           title: "Coinlocally Forex",
-          period: { start: "2024-11", end: "2025-06" },
           description:
             "وب‌سایت مستقل معاملات فارکس Coinlocally، با همان استک پلتفرم اصلی.",
           skills: ["nextjs", "react", "redux", "ant-design", "tailwindcss"],
@@ -203,23 +180,9 @@ const fa: Portfolio = {
       period: { start: "2022-12", end: "2024-09" },
       description:
         "مرکز پژوهش و توسعه‌ی بین‌رشته‌ای دانشگاه علم و صنعت در تلاقی هوش مصنوعی، علوم شناختی و علوم اجتماعی.",
-      skills: [
-        "nextjs",
-        "react",
-        "typescript",
-        "redux",
-        "zustand",
-        "react-query",
-        "mui",
-        "shadcn-ui",
-        "tailwindcss",
-        "pwa",
-        "chrome-extension",
-      ],
       children: [
         {
           title: "Wiki Knowledge Management Platform",
-          period: { start: "2022-12", end: "2024-09" },
           description:
             "پلتفرمی مشابه ویکی‌پدیا که کاربران در آن محتوا تولید می‌کنند و گروهی مستقل از داوران، انتشار آن را تأیید می‌کنند.",
           skills: [
@@ -233,7 +196,6 @@ const fa: Portfolio = {
         },
         {
           title: "Message Engineering",
-          period: { start: "2022-12", end: "2024-09" },
           description:
             "پلتفرم تحلیل شبکه‌های اجتماعی بر اساس پارامترهای علوم شناختی، به همراه تولید محتوا برای شبکه‌ها و نمودارهای تحلیلی گسترده.",
           skills: [
@@ -247,7 +209,6 @@ const fa: Portfolio = {
         },
         {
           title: "Robotics — Social Action Automation",
-          period: { start: "2022-12", end: "2024-09" },
           description:
             "نسخه‌ی نخست یک پلتفرم متمرکز که به شبکه‌های اجتماعی متصل می‌شود و امکان مدیریت گسترده‌ی حساب‌ها (لایک، کامنت، تولید محتوا و …) را به شکلی انسان‌گونه فراهم می‌کند.",
           skills: [
@@ -266,7 +227,6 @@ const fa: Portfolio = {
         },
         {
           title: "Campaign Management Platform",
-          period: { start: "2022-12", end: "2024-09" },
           description:
             "یک PWA با رویکرد mobile-first برای ارائه‌ی محتوای آموزشی ویدئویی و ارسال پیام به کانال‌های مسنجری. متشکل از دو اپلیکیشن جداگانه: اپ کاربر نهایی و پنل ادمین برای مدیریت محتوا و عملیات.",
           skills: [
@@ -297,19 +257,10 @@ const fa: Portfolio = {
       period: { start: "2021-05", end: "2022-12" },
       description:
         "شرکت فین‌تک تأسیس ۲۰۰۲، متخصص در حوزه‌ی Core Banking، راهکارهای کارت و پرداخت، بانکداری اسلامی و BI برای بانک‌های کوچک تا متوسط.",
-      skills: [
-        "nextjs",
-        "react",
-        "typescript",
-        "react-query",
-        "chakra-ui",
-        "tailwindcss",
-      ],
       children: [
         {
           title: "Dolphintex Exchange (Web App)",
           role: "Frontend Lead",
-          period: { start: "2021-05", end: "2022-12" },
           description:
             "وب اپلیکیشن صرافی ارز دیجیتال. سرپرستی فرانت‌اند پروژه و انجام یک ریفکتور اساسی در زمان تحویل، شامل بازنگری معماری، بهینه‌سازی عملکرد و افزایش قابلیت نگهداری بلندمدت.",
           skills: [
@@ -322,7 +273,6 @@ const fa: Portfolio = {
         },
         {
           title: "Dolphintex Corporate Website",
-          period: { start: "2021-05", end: "2022-12" },
           description: "وب‌سایت معرفی صرافی Dolphintex.",
           skills: [
             "nextjs",
@@ -343,19 +293,9 @@ const fa: Portfolio = {
       period: { start: "2020-12", end: "2021-09" },
       description:
         "پلتفرم خدمات مارکتینگ برای ارتباط مستقیم میان کسب‌وکارها و اینفلوئنسرها در یک بستر کنترل‌شده و تراکنش‌محور، که فرآیند معامله را از مسیر پرحاشیه‌ی DMها خارج می‌کند.",
-      skills: [
-        "typescript",
-        "react",
-        "nextjs",
-        "mui",
-        "axios",
-        "react-query",
-        "redux",
-      ],
       children: [
         {
           title: "Local Influencers Platform",
-          period: { start: "2020-12", end: "2021-09" },
           description:
             "پلتفرمی که به اینفلوئنسرها امکان می‌دهد پیشنهادهای قیمت‌دار خود را از طریق URL اختصاصی پروفایل (مانند localinfluencers.io/bbc) منتشر کنند و کسب‌وکارها بتوانند در چند مرحله، تبلیغ پولی رزرو نمایند.",
           skills: [
@@ -379,29 +319,15 @@ const fa: Portfolio = {
       period: { start: "2020-03", end: "2021-05" },
       description:
         "شرکت نرم‌افزاری تأسیس ۲۰۰۳، فعال در تولید نرم‌افزارهای مالی، اداری و درمانی، از جمله مجموعه‌ی مدیریت کلینیک و بیمارستان «پارسیزطب» و نرم‌افزار پشتیبان‌گیری «اُباک».",
-      skills: [
-        "html5",
-        "css3",
-        "bootstrap",
-        "javascript",
-        "jquery",
-        "react",
-        "redux",
-        "react-query",
-        "axios",
-        "ant-design",
-      ],
       children: [
         {
           title: "Parsiz Teb Website",
-          period: { start: "2020-03", end: "2021-05" },
           description:
             "وب‌سایت معرفی محصول مجموعه‌ی مدیریت کلینیک و بیمارستان پارسیز طب.",
           skills: ["html5", "css3", "javascript", "jquery"],
         },
         {
           title: "Parsiz Office Automation",
-          period: { start: "2020-03", end: "2021-05" },
           description:
             "نخستین پروژه‌ی حرفه‌ای من با React؛ یک وب اپلیکیشن سازمانی اتوماسیون اداری با دامنه‌ی گسترده‌ی قابلیت‌ها و فرآیندهای پیچیده. مالکیت کامل سمت فرانت‌اند.",
           skills: [
@@ -415,7 +341,6 @@ const fa: Portfolio = {
         },
         {
           title: "Parsiz Corporate Website",
-          period: { start: "2020-03", end: "2021-05" },
           description: "وب‌سایت شرکتی برای معرفی پورتفولیوی کامل محصولات.",
           skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
@@ -430,38 +355,32 @@ const fa: Portfolio = {
       period: { start: "2018-09", end: "2020-03" },
       description:
         "شرکت دانش‌بنیان فعال در حوزه‌ی خدمات IT با تمرکز بر شبکه، توسعه‌ی نرم‌افزار و هوش مصنوعی.",
-      skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
       children: [
         {
           title: "Eshgh o Choob",
-          period: { start: "2018-09", end: "2020-03" },
           description:
             "وب‌سایت فروشگاهی محصولات منبت و معرق چوبی دست‌ساز. تمامی صفحات فروشگاه را پیاده‌سازی کردم و خروجی را جهت یکپارچه‌سازی در ساختار MVC به تیم بک‌اند تحویل دادم.",
           skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Abar Rayane Corporate Website",
-          period: { start: "2018-09", end: "2020-03" },
           description:
             "طراحی و پیاده‌سازی end-to-end وب‌سایت شرکتی به همراه طراحی UI درون‌پروژه‌ای، بدون استفاده از ابزارهایی نظیر Figma یا Adobe XD.",
           skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Daadyab",
-          period: { start: "2018-09", end: "2020-03" },
           description:
             "پلتفرم لیگال‌تک برای ارتباط وکلا و موکلین، ارجاع پرونده، مقایسه‌ی وکلا و مشاوره‌ی آنلاین. وب‌سایت اصلی را بر اساس طراحی Adobe XD پیاده‌سازی کردم.",
           skills: ["html5", "css3", "bootstrap", "javascript", "jquery"],
         },
         {
           title: "Sazeh For You",
-          period: { start: "2018-09", end: "2020-03" },
           description: "لندینگ پیج معرفی محصولات یک شرکت تولیدی صنعتی.",
           skills: ["html5", "css3", "javascript", "jquery"],
         },
         {
           title: "Babol Carpet",
-          period: { start: "2018-09", end: "2020-03" },
           description:
             "وب‌سایت فروشگاه و پنل مدیریت یکی از تولیدکنندگان قدیمی فرش و موکت کشور با صادرات به بیش از ۲۰ کشور.",
           skills: ["html5", "css3", "javascript", "jquery"],
@@ -476,39 +395,10 @@ const fa: Portfolio = {
       period: { start: "2020-01", end: "present" },
       description:
         "همکاری مستقل با کارفرمایان در پروژه‌های متنوعی شامل فروشگاه‌های آنلاین، ابزارهای رسانه‌ای مبتنی بر هوش مصنوعی، داشبوردهای computer vision، ولت‌های ارز دیجیتال، فروشگاه‌های تعاملی سه‌بعدی و لندینگ پیج‌های متعارف.",
-      skills: [
-        "nextjs",
-        "react",
-        "typescript",
-        "tailwindcss",
-        "shadcn-ui",
-        "react-query",
-        "mui",
-        "chakra-ui",
-        "vite",
-        "redux",
-        "axios",
-        "three",
-        "gsap",
-        "html5",
-        "css3",
-        "sass",
-        "handlebars",
-        "gulp",
-        "swiper",
-        "chartjs",
-        "nestjs",
-        "prisma",
-        "aws-s3",
-        "jwt",
-        "websocket",
-        "docker",
-      ],
       children: [
         {
           title: "MS Cosmetic",
           role: "Full-Stack Developer",
-          period: { start: "2024-11", end: "present" },
           description:
             "پیاده‌سازی end-to-end یک پلتفرم فروشگاهی محصولات آرایشی و بهداشتی شامل وب‌سایت مشتری و پنل ادمین اختصاصی. مالکیت کامل سمت فرانت‌اند و بک‌اند.",
           skills: [
@@ -530,21 +420,18 @@ const fa: Portfolio = {
         },
         {
           title: "AI Podcast & Audio Editing Platform",
-          period: { start: "2020-01", end: "present" },
           description:
             "استودیوی ویرایش صوت مبتنی بر هوش مصنوعی با ادیتور حرفه‌ای: فایل صوتی آپلود می‌شود، متن آن تولید می‌گردد، و ویرایش به صورت دو طرفه میان waveform و متن همگام می‌شود.",
           skills: ["react", "vite", "typescript", "chakra-ui", "react-query"],
         },
         {
           title: "Driving-Assistance Object Detection Platform",
-          period: { start: "2020-01", end: "present" },
           description:
             "وب اپلیکیشنی که ویدئوی رانندگی را به فریم تقسیم می‌کند و به کاربر امکان می‌دهد اشیاء مشخصی (مثلاً «خودروی سفید») را تگ‌گذاری کرده و تشخیص‌ها را در هر فریم مشاهده کند.",
           skills: ["react", "typescript", "tailwindcss", "react-query"],
         },
         {
           title: "Cosmetics E-Commerce Site",
-          period: { start: "2020-01", end: "present" },
           description: "وب‌سایت فروشگاهی برای یک برند آرایشی و بهداشتی مستقل.",
           skills: [
             "nextjs",
@@ -556,14 +443,12 @@ const fa: Portfolio = {
         },
         {
           title: "360° Interactive Storefront",
-          period: { start: "2020-01", end: "present" },
           description:
             "کانسپت متفاوت e-commerce: نمایش ۳۶۰ درجه/پانوراما از فضای فروشگاه با محصولات قابل کلیک در سرتاسر صحنه، تا کاربر تجربه‌ای نزدیک به حضور فیزیکی در فروشگاه داشته باشد.",
           skills: ["nextjs", "react", "three", "mui", "gsap", "axios"],
         },
         {
           title: "Crypto Wallet Manager",
-          period: { start: "2020-01", end: "present" },
           description:
             "پلتفرمی self-custody-style برای مدیریت ولت‌های ارز دیجیتال، انتقال دارایی و Swap. صرافی نیست.",
           skills: [
@@ -576,19 +461,16 @@ const fa: Portfolio = {
         },
         {
           title: "Tabasgardi",
-          period: { start: "2020-01", end: "present" },
           description: "پروژه‌ای صرفاً در حد لندینگ پیج.",
           skills: ["html5", "css3", "sass", "gulp"],
         },
         {
           title: "Hermes Shop",
-          period: { start: "2020-01", end: "present" },
           description: "فرانت‌اند فروشگاهی مبتنی بر تمپلیت.",
           skills: ["handlebars", "tailwindcss", "gulp"],
         },
         {
           title: "Quiz",
-          period: { start: "2020-01", end: "present" },
           description: "رابط تعاملی کوییز با نمودار و کاروسل.",
           skills: ["handlebars", "vite", "tailwindcss", "swiper", "chartjs"],
         },

@@ -4,6 +4,7 @@ export interface SkillDef {
   code: string;
   label: string;
   iconPath: string | null;
+  invertOnDark?: boolean;
 }
 
 const ICON_BASE = "/images";
@@ -55,11 +56,11 @@ export const SKILLS: SkillDef[] = [
     iconPath: icon("tailwindcss.svg"),
   },
   { code: "mui", label: "Material UI", iconPath: icon("mui.svg") },
-  { code: "shadcn-ui", label: "Shadcn UI", iconPath: icon("shadcn-ui.svg") },
+  { code: "shadcn-ui", label: "Shadcn UI", iconPath: icon("shadcn-ui.svg"), invertOnDark: true },
   { code: "chakra-ui", label: "Chakra UI", iconPath: icon("chakra-ui.svg") },
   { code: "ant-design", label: "Ant Design", iconPath: icon("ant-design.svg") },
   { code: "bootstrap", label: "Bootstrap", iconPath: icon("bootstrap.svg") },
-  { code: "radix-ui", label: "Radix UI", iconPath: icon("radix-ui.svg") },
+  { code: "radix-ui", label: "Radix UI", iconPath: icon("radix-ui.svg"), invertOnDark: true },
   { code: "framer-motion", label: "Framer Motion", iconPath: null },
   { code: "jquery", label: "jQuery", iconPath: icon("jquery.svg") },
   { code: "react-select", label: "React Select", iconPath: null },
@@ -84,8 +85,8 @@ export const SKILLS: SkillDef[] = [
   { code: "chartjs", label: "Chart.js", iconPath: icon("chartjs.svg") },
 
   // Animation & 3D
-  { code: "gsap", label: "GSAP", iconPath: icon("gsap.svg") },
-  { code: "three", label: "Three.js", iconPath: icon("three.svg") },
+  { code: "gsap", label: "GSAP", iconPath: icon("gsap.svg"), invertOnDark: true },
+  { code: "three", label: "Three.js", iconPath: icon("three.svg"), invertOnDark: true },
 
   // Templating
   { code: "handlebars", label: "Handlebars", iconPath: icon("handlebars.svg") },
@@ -118,7 +119,7 @@ export const SKILLS: SkillDef[] = [
   { code: "git", label: "Git", iconPath: icon("git.svg") },
 
   // Special frontend targets
-  { code: "pwa", label: "PWA", iconPath: icon("pwa.svg") },
+  { code: "pwa", label: "PWA", iconPath: icon("pwa.svg"), invertOnDark: true },
   {
     code: "chrome-extension",
     label: "Chrome Extension",
@@ -142,7 +143,7 @@ export const SKILLS: SkillDef[] = [
   { code: "elasticsearch", label: "Elasticsearch", iconPath: null },
 
   // ORMs
-  { code: "prisma", label: "Prisma", iconPath: icon("prisma.svg") },
+  { code: "prisma", label: "Prisma", iconPath: icon("prisma.svg"), invertOnDark: true },
   { code: "typeorm", label: "TypeORM", iconPath: null },
   { code: "drizzle", label: "Drizzle ORM", iconPath: null },
   { code: "mongoose", label: "Mongoose", iconPath: null },
@@ -183,6 +184,10 @@ export function getSkillLabel(code: string): string {
 
 export function getSkillIconPath(code: string): string | null {
   return skillMap.get(code)?.iconPath ?? null;
+}
+
+export function getSkillInvertOnDark(code: string): boolean {
+  return skillMap.get(code)?.invertOnDark ?? false;
 }
 
 /**

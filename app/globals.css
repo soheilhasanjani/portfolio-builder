@@ -2,20 +2,36 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --font-mono:
-    var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+/* Wire Next.js font variables into Tailwind's theme layer */
+@theme inline {
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }
 
+/* RTL (fa): Vazirmatn covers both stacks — Persian has no monospace variant */
+[dir="rtl"] {
+  --font-sans: var(--font-vazirmatn);
+  --font-mono: var(--font-vazirmatn);
+}
+
+/* Utility classes consumed by components */
+@utility sans {
+  font-family: var(--font-sans);
+}
+@utility mono {
+  font-family: var(--font-mono);
+}
+
+/* ── Base surface (Vercel tokens) ── */
+
 body {
-  background-color: #ffffff;
-  color: #111827;
+  background-color: #fafafa; /* canvas-soft */
+  color: #171717; /* ink */
 }
 
 .dark body {
-  background-color: #000;
-  color: #f3f4f6;
+  background-color: #171717; /* showcase-band-dark */
+  color: #ffffff; /* on-primary */
 }
 
 @media print {

@@ -67,13 +67,13 @@ export function FloatingButtons({ lang }: Props) {
   }
 
   const btnClass =
-    "w-11 h-11 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-50";
+    "w-11 h-11 rounded-full bg-[#ffffff] dark:bg-[#1f1f1f] border border-[#ebebeb] dark:border-[#333333] shadow-[0px_2px_2px_rgba(0,0,0,0.04),0px_8px_16px_-4px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(0,0,0,0.05)] flex items-center justify-center text-[#4d4d4d] dark:text-[#a1a1a1] hover:bg-[#fafafa] dark:hover:bg-[#2a2a2a] transition-colors disabled:opacity-50";
 
   return (
     <div className="no-print fixed bottom-6 right-6 flex flex-col gap-3 z-50">
       {/* Language */}
       <button onClick={switchLang} title="Switch language" className={btnClass}>
-        <span className="text-xs font-bold">{lang === "fa" ? "EN" : "FA"}</span>
+        <span className="mono text-xs font-bold">{lang === "fa" ? "EN" : "FA"}</span>
       </button>
 
       {/* Dark / Light */}

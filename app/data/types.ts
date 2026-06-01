@@ -68,7 +68,7 @@ export interface Experience {
     country: string;
     city: string;
   };
-  period: {
+  period?: {
     start: string;
     end: string;
   };

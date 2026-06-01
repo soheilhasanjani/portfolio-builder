@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@geist-ui/icons": "^1.0.2",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.21",
     "html2canvas": "^1.4.1",
