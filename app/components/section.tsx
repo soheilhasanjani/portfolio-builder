@@ -11,7 +11,7 @@ interface Props {
 export function Section({ icon, title, children, className }: Props) {
   return (
     <section className={cn("space-y-4", className)}>
-      <h2 className="mono text-xs uppercase flex items-center gap-1.5 pb-2 text-[#ededed] w-full">
+      <h2 className="mono text-xs uppercase flex items-center gap-1.5 pb-2 text-ink-soft w-full">
         {icon}
         {title}
       </h2>

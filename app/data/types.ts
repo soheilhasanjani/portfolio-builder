@@ -80,6 +80,7 @@ export interface Experience {
   description?: string;
   stacks?: string[];
   responsibilities?: string[];
+  value?: number;
   children?: Omit<Experience, "children">[];
 }
 
@@ -104,18 +105,23 @@ export interface FeaturedProject {
   tech_stack: string[];
 }
 
+export interface ImpactHighlight {
+  title: string;
+  description: string;
+}
+
+export interface AdditionalInfoItem {
+  label: string;
+  value: string;
+}
+
 export interface Portfolio {
   profile: Profile;
   about: About;
-  domains: string[];
-  projects: {
-    featured: FeaturedProject[];
-    all: FeaturedProject[];
-  };
+  impact_highlights: ImpactHighlight[];
   experience: Experience[];
   education: Education[];
-  achievements: string[];
-  services: string[];
+  additional_information: AdditionalInfoItem[];
   preferences: {
     portfolio_goal: string | null;
     tone: string;

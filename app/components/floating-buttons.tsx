@@ -2,19 +2,23 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
   lang: string;
 }
+
+type PdfMode = "visual" | "cv";
 
 export function FloatingButtons({ lang }: Props) {
   const pathname = usePathname();
   const router = useRouter();
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [downloading, setDownloading] = useState(false);
+  const [downloading, setDownloading] = useState<PdfMode | null>(null);
   const [compact, setCompact] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -22,6 +26,17 @@ export function FloatingButtons({ lang }: Props) {
     setCompact(stored);
     document.documentElement.classList.toggle("compact", stored);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    function onClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [menuOpen]);
 
   function switchLang() {
     const otherLocale = lang === "fa" ? "en" : "fa";
@@ -41,57 +56,58 @@ export function FloatingButtons({ lang }: Props) {
     document.documentElement.classList.toggle("compact", next);
   }
 
-  async function downloadPdf() {
-    const main = document.querySelector("main");
-    if (!main || downloading) return;
+  async function downloadPdf(mode: PdfMode) {
+    if (downloading) return;
+    setDownloading(mode);
+    setMenuOpen(false);
 
-    setDownloading(true);
     try {
-      const [{ toPng }, { default: jsPDF }] = await Promise.all([
-        import("html-to-image"),
-        import("jspdf"),
-      ]);
-
-      const el = main as HTMLElement;
-      const isDark = document.documentElement.classList.contains("dark");
-      const bgColor = isDark ? "#171717" : "#fafafa";
-      const w = el.scrollWidth;
-      const h = el.scrollHeight;
-
-      const opts = { pixelRatio: 2, backgroundColor: bgColor, width: w, height: h };
-
-      // first call embeds fonts; second call renders with them loaded
-      await toPng(el, opts);
-      const dataUrl = await toPng(el, opts);
-
-      // convert CSS px → PDF pt  (96 dpi screen → 72 pt/in)
-      const ptW = (w * 72) / 96;
-      const ptH = (h * 72) / 96;
-
-      const pdf = new jsPDF({ unit: "pt", format: [ptW, ptH], orientation: "portrait" });
-      pdf.addImage(dataUrl, "PNG", 0, 0, ptW, ptH);
-      pdf.save("resume.pdf");
+      const themeForExport = resolvedTheme === "dark" ? "dark" : "light";
+      const endpoint =
+        mode === "cv"
+          ? `/api/cv?lang=${lang}`
+          : `/api/portfolio-pdf?lang=${lang}&theme=${themeForExport}`;
+      const res = await fetch(endpoint);
+      if (!res.ok) {
+        const errBody = await res.json().catch(() => ({ error: res.statusText }));
+        throw new Error(errBody.error ?? "PDF generation failed");
+      }
+      const blob = await res.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = objectUrl;
+      a.download =
+        mode === "cv" ? `cv-${lang}.pdf` : `portfolio-${lang}.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(objectUrl);
     } catch (err) {
-      console.error("PDF generation failed:", err);
+      console.error("PDF download failed:", err);
+      alert(
+        `PDF download failed: ${
+          err instanceof Error ? err.message : "unknown error"
+        }`,
+      );
     } finally {
-      setDownloading(false);
+      setDownloading(null);
     }
   }
 
   const btnClass =
-    "w-11 h-11 rounded-full bg-[#ffffff] dark:bg-[#1f1f1f] border border-[#ebebeb] dark:border-[#333333] shadow-[0px_2px_2px_rgba(0,0,0,0.04),0px_8px_16px_-4px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(0,0,0,0.05)] flex items-center justify-center text-[#4d4d4d] dark:text-[#a1a1a1] hover:bg-[#fafafa] dark:hover:bg-[#2a2a2a] transition-colors disabled:opacity-50";
+    "w-11 h-11 rounded-full bg-surface border border-border shadow-[0px_2px_2px_rgba(0,0,0,0.04),0px_8px_16px_-4px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(0,0,0,0.05)] flex items-center justify-center text-muted hover:bg-hover transition-colors disabled:opacity-50";
 
   const activeBtnClass =
-    "w-11 h-11 rounded-full bg-[#171717] dark:bg-[#ffffff] border border-[#171717] dark:border-[#ffffff] shadow-[0px_2px_2px_rgba(0,0,0,0.04),0px_8px_16px_-4px_rgba(0,0,0,0.04)] flex items-center justify-center text-[#ffffff] dark:text-[#171717] transition-colors";
+    "w-11 h-11 rounded-full bg-inverse border border-inverse shadow-[0px_2px_2px_rgba(0,0,0,0.04),0px_8px_16px_-4px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-inverse transition-colors";
+
+  const isDownloading = downloading !== null;
 
   return (
     <div className="no-print fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-      {/* Language */}
       <button onClick={switchLang} title="Switch language" className={btnClass}>
         <span className="mono text-xs font-bold">{lang === "fa" ? "EN" : "FA"}</span>
       </button>
 
-      {/* Compact toggle */}
       <button
         onClick={toggleCompact}
         title={compact ? "Show full view" : "Compact view"}
@@ -100,20 +116,42 @@ export function FloatingButtons({ lang }: Props) {
         {mounted && compact ? <ExpandIcon /> : <CompactIcon />}
       </button>
 
-      {/* Dark / Light */}
       <button onClick={toggleTheme} title="Toggle theme" className={btnClass}>
         {mounted && resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
       </button>
 
-      {/* Download PDF */}
-      <button
-        onClick={downloadPdf}
-        title="Download as PDF"
-        disabled={downloading}
-        className={btnClass}
-      >
-        {downloading ? <SpinnerIcon /> : <DownloadIcon />}
-      </button>
+      <div ref={menuRef} className="relative">
+        <button
+          onClick={() => setMenuOpen((v) => !v)}
+          title="Download as PDF"
+          disabled={isDownloading}
+          className={btnClass}
+        >
+          {isDownloading ? <SpinnerIcon /> : <DownloadIcon />}
+        </button>
+        {menuOpen && !isDownloading && (
+          <div className="absolute bottom-0 right-full mr-3 w-56 rounded-lg border border-border bg-surface shadow-[0px_8px_24px_rgba(0,0,0,0.08)] overflow-hidden">
+            <button
+              onClick={() => downloadPdf("visual")}
+              className="block w-full text-left px-4 py-3 text-sm text-ink-soft hover:bg-hover border-b border-border"
+            >
+              <div className="font-medium">Portfolio (WYSIWYG)</div>
+              <div className="text-xs text-dim mt-0.5">
+                Visual replica of the page
+              </div>
+            </button>
+            <button
+              onClick={() => downloadPdf("cv")}
+              className="block w-full text-left px-4 py-3 text-sm text-ink-soft hover:bg-hover"
+            >
+              <div className="font-medium">CV (ATS-friendly)</div>
+              <div className="text-xs text-dim mt-0.5">
+                Single-column, plain text
+              </div>
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -156,7 +194,6 @@ function SpinnerIcon() {
   );
 }
 
-// Full view active → click to compress (shows lines with paragraph lines between headers)
 function CompactIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -168,7 +205,6 @@ function CompactIcon() {
   );
 }
 
-// Compact active → click to expand (shows header-only lines)
 function ExpandIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

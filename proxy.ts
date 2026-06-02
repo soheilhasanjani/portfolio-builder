@@ -12,5 +12,5 @@ export const config = {
   // Skip Next.js internals, static asset routes, and any path with a file
   // extension (e.g. /images/react.svg, /favicon.ico) so they aren't run
   // through i18n routing.
-  matcher: ["/((?!_next|_vercel|images|favicon.ico|.*\\..*).*)"],
+  matcher: ["/((?!api|_next|_vercel|images|favicon.ico|.*\\..*).*)"],
 };

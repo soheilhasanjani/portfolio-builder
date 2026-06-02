@@ -48,8 +48,8 @@ export function Avatar({
       <span
         className={cn(
           "inline-flex items-center justify-center rounded-full",
-          "bg-[#fafafa] dark:bg-[#1f1f1f]",
-          "border border-[#ebebeb] dark:border-[#333333]",
+          "bg-card",
+          "border border-border",
           sizeClasses[size],
         )}
       >
@@ -98,7 +98,7 @@ export function AvatarGroup({
         <Avatar
           content={`+${overflow}`}
           size={size}
-          className="text-[#4d4d4d] dark:text-[#a1a1a1]"
+          className="text-muted"
         />
       )}
     </div>
@@ -124,7 +124,7 @@ export function StackAvatar({ code, size = 28, className }: StackAvatarProps) {
       unoptimized
     />
   ) : (
-    <span className="px-1 text-center text-[10px] font-medium leading-tight text-[#4d4d4d] dark:text-[#a1a1a1]">
+    <span className="px-1 text-center text-[10px] font-medium leading-tight text-muted">
       {label}
     </span>
   );
@@ -133,7 +133,7 @@ export function StackAvatar({ code, size = 28, className }: StackAvatarProps) {
     <span
       className={cn(
         "inline-flex h-12 w-12 items-center justify-center rounded-full",
-        "bg-[#fafafa] dark:bg-[#1f1f1f] border border-[#ebebeb] dark:border-[#333333]",
+        "bg-card border border-border",
         className,
       )}
       title={label}

@@ -10,7 +10,7 @@ export function FoldedCard({ children, className }: Props) {
   return (
     <div
       className={cn(
-        "relative border border-[#333] bg-[#ffffff03] p-8",
+        "relative border border-guide bg-[#ffffff03] p-8",
         className,
       )}
     >

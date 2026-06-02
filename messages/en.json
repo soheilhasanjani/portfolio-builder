@@ -3,10 +3,11 @@
     "contact": "Contact",
     "about": "About",
     "stacks": "Stack",
-    "domains": "Domains",
+    "impactHighlights": "Impact Highlights",
+    "keyProjects": "Key Projects",
     "experience": "Experience",
     "education": "Education",
-    "services": "Services"
+    "additionalInformation": "Additional Information"
   },
   "hero": {
     "greeting": "Hello, I'm {name}"

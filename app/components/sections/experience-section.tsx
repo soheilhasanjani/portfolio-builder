@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import Briefcase from "@geist-ui/icons/briefcase";
+import { Icon } from "../icons";
 import { type Experience } from "../../data/types";
 import { ExperienceNode } from "../experience-node";
 import { formatMonthYear, formatDuration } from "../../../lib/date";
@@ -22,7 +22,9 @@ export async function ExperienceSection({
   ]);
 
   function formatPeriod(date: string) {
-    return date === "present" ? tExperience("present") : formatMonthYear(date, lang);
+    return date === "present"
+      ? tExperience("present")
+      : formatMonthYear(date, lang);
   }
 
   function formatDur(start: string, end: string) {
@@ -30,7 +32,7 @@ export async function ExperienceSection({
   }
 
   return (
-    <Section icon={<Briefcase size={12} />} title={tSections("experience")}>
+    <Section icon={<Icon name="briefcase" size={12} />} title={tSections("experience")}>
       <div>
         {experience.map((exp, i) => (
           <ExperienceNode

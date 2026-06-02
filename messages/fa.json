@@ -3,10 +3,11 @@
     "contact": "تماس",
     "about": "درباره من",
     "stacks": "استک",
-    "domains": "حوزه‌های کاری",
+    "impactHighlights": "نقاط برجسته",
+    "keyProjects": "پروژه‌های کلیدی",
     "experience": "سابقه کاری",
     "education": "تحصیلات",
-    "services": "خدمات"
+    "additionalInformation": "اطلاعات تکمیلی"
   },
   "hero": {
     "greeting": "سلام، من {name} هستم"
