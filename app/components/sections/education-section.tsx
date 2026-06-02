@@ -1,14 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import Book from "@geist-ui/icons/book";
 import { type Education } from "../../data/types";
-import { getStackLabel } from "../../data/stacks";
+import { getStack, sortedStackCodes } from "../../../lib/stacks";
 import { formatMonthYear } from "../../../lib/date";
-import { badgeSm } from "../../tokens";
+import { Badge } from "../ui/badge";
 import { Section } from "../section";
-
-function toSortKey(date: string) {
-  return date === "present" ? "9999-99" : date;
-}
 
 export async function EducationSection({
   education,
@@ -25,10 +21,6 @@ export async function EducationSection({
     getTranslations("experience"),
   ]);
 
-  const sorted = [...education].sort((a, b) =>
-    toSortKey(b.period.start).localeCompare(toSortKey(a.period.start)),
-  );
-
   function formatPeriod(date: string) {
     return date === "present"
       ? tExperience("present")
@@ -37,7 +29,7 @@ export async function EducationSection({
 
   return (
     <Section icon={<Book size={12} />} title={tSections("education")}>
-      {sorted.map((edu, i) => (
+      {education.map((edu, i) => (
         <div key={i} className="space-y-2">
           <div>
             <h3 className="text-lg font-semibold tracking-tight text-[#171717] dark:text-white">
@@ -73,10 +65,10 @@ export async function EducationSection({
 
           {edu.stacks.length > 0 && (
             <div className="flex flex-wrap gap-2">
-              {edu.stacks.map((code) => (
-                <span key={code} className={badgeSm}>
-                  {getStackLabel(code)}
-                </span>
+              {sortedStackCodes(edu.stacks).map((code) => (
+                <Badge key={code} size="sm">
+                  {getStack(code).label}
+                </Badge>
               ))}
             </div>
           )}

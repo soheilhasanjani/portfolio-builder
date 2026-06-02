@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getData, hasLocale } from "./dictionaries";
-import { collectStacksFromExperience } from "../data/stacks";
+import { collectStacksFromExperience, sortedStackCodes } from "../../lib/stacks";
+import { sortExperienceByTime, sortEducationByTime } from "../../lib/sort";
 import { cn } from "../../lib/utils";
 import { FloatingButtons } from "../components/floating-buttons";
 import { HeroSection } from "../components/sections/hero-section";
@@ -22,7 +23,9 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
 
   const data = await getData(lang);
   const { profile, about, domains, services, experience, education } = data;
-  const allStacks = collectStacksFromExperience(experience);
+  const sortedExperience = sortExperienceByTime(experience);
+  const sortedEducation = sortEducationByTime(education);
+  const allStacks = sortedStackCodes(collectStacksFromExperience(sortedExperience));
   const dir = lang === "fa" ? "rtl" : "ltr";
 
   return (
@@ -32,8 +35,8 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <AboutSection about={about} />
         <StacksSection stacks={allStacks} />
         <DomainsSection domains={domains} />
-        <ExperienceSection experience={experience} lang={lang} />
-        <EducationSection education={education} lang={lang} />
+        <ExperienceSection experience={sortedExperience} lang={lang} />
+        <EducationSection education={sortedEducation} lang={lang} />
         <ServicesSection services={services} />
       </main>
       <FloatingButtons lang={lang} />

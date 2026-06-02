@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant compact (&:where(.compact, .compact *));
 
 /* Wire Next.js font variables into Tailwind's theme layer */
 @theme inline {
@@ -24,6 +25,16 @@
 
 /* ── Base surface (Vercel tokens) ── */
 
+:root {
+  --ds-background-200: #fafafa;
+  --guide-color: #1f1f1f;
+}
+
+.dark {
+  --ds-background-200: #171717;
+  --guide-color: #333;
+}
+
 body {
   background-color: #fafafa; /* canvas-soft */
   color: #171717; /* ink */
@@ -32,6 +43,41 @@ body {
 .dark body {
   background-color: #171717; /* showcase-band-dark */
   color: #ffffff; /* on-primary */
+}
+
+/* ── Folded card corner ── */
+
+.fold-corner {
+  z-index: 10;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: -1px;
+  inset-inline-end: -1px;
+  overflow: hidden;
+  background-color: var(--ds-background-200);
+  border-bottom: 1px solid var(--guide-color);
+  border-inline-start: 1px solid var(--guide-color);
+}
+
+.fold-corner::after {
+  content: "";
+  border-left: 35px solid var(--ds-background-200);
+  z-index: 10;
+  border-top: 35px solid transparent;
+  position: absolute;
+  top: 0px;
+  inset-inline-end: 0;
+}
+
+.fold-corner::before {
+  content: "";
+  border-left: 35px solid var(--guide-color);
+  border-top: 35px solid var(--ds-background-200);
+  z-index: 5;
+  position: absolute;
+  top: -2px;
+  inset-inline-end: 0;
 }
 
 @media print {

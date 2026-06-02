@@ -29,6 +29,11 @@ export enum LocationType {
   Remote = "remote",
 }
 
+export enum ExperienceType {
+  Company = "company",
+  Project = "project",
+}
+
 export enum ProfileStatus {
   OpenToWork = "open_to_work",
   Hiring = "hiring",
@@ -56,11 +61,11 @@ export interface Profile {
 
 export interface About {
   summary: string;
-  top_stacks: string[];
 }
 
 export interface Experience {
   title: string;
+  type?: ExperienceType;
   role?: string;
   employment_type?: EmploymentType;
   location_type?: LocationType;

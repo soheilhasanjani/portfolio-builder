@@ -3,12 +3,7 @@ import Briefcase from "@geist-ui/icons/briefcase";
 import { type Experience } from "../../data/types";
 import { ExperienceNode } from "../experience-node";
 import { formatMonthYear, formatDuration } from "../../../lib/date";
-import { badgeSm } from "../../tokens";
 import { Section } from "../section";
-
-function toSortKey(date: string) {
-  return date === "present" ? "9999-99" : date;
-}
 
 export async function ExperienceSection({
   experience,
@@ -26,16 +21,8 @@ export async function ExperienceSection({
     getTranslations("locationType"),
   ]);
 
-  const sorted = [...experience].sort((a, b) =>
-    toSortKey(b.period?.start ?? "").localeCompare(
-      toSortKey(a.period?.start ?? ""),
-    ),
-  );
-
   function formatPeriod(date: string) {
-    return date === "present"
-      ? tExperience("present")
-      : formatMonthYear(date, lang);
+    return date === "present" ? tExperience("present") : formatMonthYear(date, lang);
   }
 
   function formatDur(start: string, end: string) {
@@ -44,27 +31,18 @@ export async function ExperienceSection({
 
   return (
     <Section icon={<Briefcase size={12} />} title={tSections("experience")}>
-      <div className="relative">
-        <div className="absolute left-[15px] top-[15px] bottom-[15px] w-px bg-[#ebebeb] dark:bg-[#333333]" />
-        <div className="space-y-10">
-          {sorted.map((exp) => (
-            <div key={exp.title} className="relative flex gap-5">
-              <div className="relative z-10 shrink-0 h-[30px] w-[30px] rounded-full border border-[#ebebeb] dark:border-[#333333] bg-[#ffffff] dark:bg-[#171717] flex items-center justify-center text-[#888888]">
-                <Briefcase size={12} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <ExperienceNode
-                  exp={exp}
-                  badgeSm={badgeSm}
-                  formatPeriod={formatPeriod}
-                  formatDuration={formatDur}
-                  tEmp={tEmp}
-                  tLoc={tLoc}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+      <div>
+        {experience.map((exp, i) => (
+          <ExperienceNode
+            key={exp.title}
+            exp={exp}
+            isLast={i === experience.length - 1}
+            formatPeriod={formatPeriod}
+            formatDuration={formatDur}
+            tEmp={tEmp}
+            tLoc={tLoc}
+          />
+        ))}
       </div>
     </Section>
   );
