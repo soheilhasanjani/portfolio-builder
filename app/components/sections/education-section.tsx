@@ -5,6 +5,7 @@ import { getStack, sortedStackCodes } from "../../../lib/stacks";
 import { formatMonthYear } from "../../../lib/date";
 import { Badge } from "../ui/badge";
 import { Section } from "../section";
+import { Typography } from "../ui/typography";
 
 export async function EducationSection({
   education,
@@ -32,35 +33,35 @@ export async function EducationSection({
       {education.map((edu, i) => (
         <div key={i} className="space-y-2">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink">
+            <Typography variant="heading" component="h3" className="tracking-tight">
               {edu.school}
-            </h3>
-            <p className="mono text-sm text-muted">
+            </Typography>
+            <Typography variant="body-mono">
               {[edu.degree, edu.field_of_study].filter(Boolean).join(" · ")}
-            </p>
-            <p className="mono text-xs text-subtle">
+            </Typography>
+            <Typography variant="meta" component="p">
               {formatPeriod(edu.period.start)} – {formatPeriod(edu.period.end)}
-            </p>
+            </Typography>
           </div>
 
           {edu.grade && (
-            <p className="text-sm text-muted">
-              <span className="mono text-subtle">{tEdu("grade")}:</span>{" "}
+            <Typography variant="body">
+              <Typography variant="meta">{tEdu("grade")}:</Typography>{" "}
               {edu.grade}
-            </p>
+            </Typography>
           )}
 
           {edu.activities && (
-            <p className="text-sm text-muted">
-              <span className="mono text-subtle">{tEdu("activities")}:</span>{" "}
+            <Typography variant="body">
+              <Typography variant="meta">{tEdu("activities")}:</Typography>{" "}
               {edu.activities}
-            </p>
+            </Typography>
           )}
 
           {edu.description && (
-            <p className="text-sm text-muted leading-7">
+            <Typography variant="body" className="leading-7">
               {edu.description}
-            </p>
+            </Typography>
           )}
 
           {edu.stacks.length > 0 && (

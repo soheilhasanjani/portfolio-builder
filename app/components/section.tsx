@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { cn } from "../../lib/utils";
+import { Typography } from "./ui/typography";
 
 interface Props {
   icon: ReactNode;
@@ -11,10 +12,10 @@ interface Props {
 export function Section({ icon, title, children, className }: Props) {
   return (
     <section className={cn("space-y-4", className)}>
-      <h2 className="mono text-xs uppercase flex items-center gap-1.5 pb-2 text-ink-soft w-full">
+      <Typography variant="section" className="flex items-center gap-1.5 pb-2 w-full">
         {icon}
         {title}
-      </h2>
+      </Typography>
       {children}
     </section>
   );

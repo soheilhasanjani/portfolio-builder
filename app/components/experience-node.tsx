@@ -6,6 +6,7 @@ import { EmploymentBadge, LocationBadge } from "./ui/experience-badges";
 import { ProjectCard } from "./ui/project-card";
 import { Note } from "./ui/note";
 import { StackAvatarGroup } from "./ui/stack-avatar-group";
+import { Typography } from "./ui/typography";
 import { Icon } from "./icons";
 
 const HIGH_SCORE_THRESHOLD = 75;
@@ -55,18 +56,18 @@ function ExperienceBody({
       {(locationParts || exp.period) && (
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {locationParts && (
-            <p className="mono inline-flex items-center gap-1 text-xs uppercase text-subtle">
+            <Typography variant="label" component="p" className="inline-flex items-center gap-1">
               <Icon name="map-pin" size={11} />
               {locationParts}
-            </p>
+            </Typography>
           )}
           {exp.period && (
-            <p className="mono inline-flex items-center gap-1 text-xs uppercase text-subtle">
+            <Typography variant="label" component="p" className="inline-flex items-center gap-1">
               <Icon name="clock" size={11} />
               {formatPeriod(exp.period.start)} – {formatPeriod(exp.period.end)}
               {" · "}
               {formatDuration(exp.period.start, exp.period.end)}
-            </p>
+            </Typography>
           )}
         </div>
       )}
@@ -96,14 +97,12 @@ function ExperienceBody({
 
       {/* Description */}
       {exp.description && (
-        <p
-          className={cn(
-            "text-sm leading-relaxed compact:hidden",
-            hasResponsibilities ? "text-muted-bright" : "text-muted",
-          )}
+        <Typography
+          variant="body"
+          className={cn("compact:hidden", hasResponsibilities && "text-muted-bright")}
         >
           {exp.description}
-        </p>
+        </Typography>
       )}
 
       {/* Responsibilities */}
@@ -176,9 +175,9 @@ export function ExperienceNode({
       <div
         className={cn("flex-1 min-w-0 space-y-2.5 pt-1", !isLast && "pb-12")}
       >
-        <h3 className="text-lg font-semibold text-ink leading-snug">
+        <Typography variant="heading" component="h3">
           {exp.title}
-        </h3>
+        </Typography>
 
         {body}
 

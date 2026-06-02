@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "../../../lib/utils";
 import { StackAvatarGroup } from "./stack-avatar-group";
+import { Typography } from "./typography";
 import { Icon } from "../icons";
 
 interface Props {
@@ -31,24 +32,19 @@ export function ProjectCard({
 }: Props) {
   return (
     <div className={cn("bg-card p-6 flex flex-col gap-2.5", className)}>
-      <h3 className="inline-flex items-center gap-1.5 text-base font-semibold text-ink leading-snug">
+      <Typography variant="subheading" component="h3" className="inline-flex items-center gap-1.5">
         {title}
         {showFlame && (
           <span className="text-flame">
             <Icon name="flame" size={14} />
           </span>
         )}
-      </h3>
+      </Typography>
 
       {description && (
-        <p
-          className={cn(
-            "text-sm leading-relaxed text-muted",
-            descriptionClassName,
-          )}
-        >
+        <Typography variant="body" className={descriptionClassName}>
           {description}
-        </p>
+        </Typography>
       )}
 
       {children}

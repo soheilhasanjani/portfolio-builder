@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "../../../lib/utils";
 
-type Size = "sm" | "md";
+type Size = "sm" | "md" | "lg";
 
 export type Variant =
   | "default"
@@ -43,7 +43,8 @@ export function Badge({
     <span
       className={cn(
         "mono inline-flex items-center border rounded-full uppercase",
-        size === "md" && "gap-2 px-3 py-1 text-sm",
+        size === "lg" && "gap-2 px-3 py-1 text-sm",
+        size === "md" && "gap-1.5 px-2.5 py-0.5 text-xs",
         size === "sm" && "gap-1.5 px-2 py-0.5 text-[10px]",
         variants[variant],
         className,

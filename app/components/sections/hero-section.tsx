@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Icon } from "../icons";
 import type { IconName } from "../icons";
 import { ContactType, type Profile, ProfileStatus } from "../../data/types";
+import { Typography } from "../ui/typography";
 import { cn } from "../../../lib/utils";
 
 function statusColor(status: ProfileStatus): { dot: string; ping: string } {
@@ -38,7 +39,7 @@ export async function HeroSection({ profile }: { profile: Profile }) {
   return (
     <section className="space-y-4">
       {profile.status && (
-        <div className="mono uppercase inline-flex items-center gap-2 text-xs text-subtle">
+        <Typography variant="label" className="inline-flex items-center gap-2">
           <span className="relative flex h-2 w-2">
             <span
               className={cn(
@@ -54,20 +55,20 @@ export async function HeroSection({ profile }: { profile: Profile }) {
             />
           </span>
           <span>{tProfileStatus(profile.status)}</span>
-        </div>
+        </Typography>
       )}
 
       <div className="space-y-1">
-        <h1 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-ink">
+        <Typography variant="display">
           {tHero("greeting", {
             name: [profile.first_name, profile.additional_name, profile.last_name]
               .filter(Boolean)
               .join(" "),
           })}
-        </h1>
-        <p className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-muted">
+        </Typography>
+        <Typography variant="display" component="p" className="text-muted">
           {profile.headline}
-        </p>
+        </Typography>
       </div>
 
       <div className="mono flex items-center justify-between gap-4 text-sm text-subtle">

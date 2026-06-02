@@ -45,7 +45,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
     <>
       <main
         dir={dir}
-        className={cn("sans max-w-4xl mx-auto px-6 py-16 space-y-16")}
+        className={cn("sans max-w-3xl mx-auto px-6 py-16 space-y-16")}
       >
         <HeroSection profile={profile} />
         <AboutSection about={about} />
