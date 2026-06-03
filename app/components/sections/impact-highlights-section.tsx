@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Icon } from "../icons";
-import { FoldedCard } from "../ui/folded-card";
+import type { IconName } from "../icons";
 import { Section } from "../section";
 import { Typography } from "../ui/typography";
 import type { ImpactHighlight } from "../../data/types";
@@ -15,17 +15,25 @@ export async function ImpactHighlightsSection({
   if (!highlights || highlights.length === 0) return null;
 
   return (
-    <Section icon={<Icon name="award" size={12} />} title={tSections("impactHighlights")}>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <Section
+      icon={<Icon name="award" size={12} />}
+      title={tSections("impactHighlights")}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {highlights.map((h) => (
-          <FoldedCard key={h.title}>
-            <Typography variant="title" component="h3" className="mb-1.5">
-              {h.title}
-            </Typography>
-            <Typography variant="body">
-              {h.description}
-            </Typography>
-          </FoldedCard>
+          <div key={h.title} className="flex items-start gap-3">
+            <div className="space-y-[12px]">
+              <div className="flex items-center gap-2 text-teal-fg">
+                <Icon name={h.icon as IconName} size={16} />
+                <h3 className="font-normal text-[16px] leading-6 text-[#ededed]">
+                  {h.title}
+                </h3>
+              </div>
+              <p className="text-[#a1a1a1] text-[18px] font-[500] leading-[26px]">
+                {h.description}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
     </Section>

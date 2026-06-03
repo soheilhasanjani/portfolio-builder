@@ -9,9 +9,7 @@ export async function AboutSection({ about }: { about: About }) {
 
   return (
     <Section icon={<Icon name="user" size={12} />} title={tSections("about")}>
-      <Typography variant="body-lg">
-        {about.summary}
-      </Typography>
+      <Typography variant="body-lg">{about.summary}</Typography>
     </Section>
   );
 }

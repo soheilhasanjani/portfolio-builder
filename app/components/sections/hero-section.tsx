@@ -61,7 +61,11 @@ export async function HeroSection({ profile }: { profile: Profile }) {
       <div className="space-y-1">
         <Typography variant="display">
           {tHero("greeting", {
-            name: [profile.first_name, profile.additional_name, profile.last_name]
+            name: [
+              profile.first_name,
+              profile.additional_name,
+              profile.last_name,
+            ]
               .filter(Boolean)
               .join(" "),
           })}
@@ -73,32 +77,54 @@ export async function HeroSection({ profile }: { profile: Profile }) {
 
       <div className="mono flex items-center justify-between gap-4 text-sm text-subtle">
         <div className="flex flex-wrap gap-x-4 gap-y-1">
-          {profile.industry && <span>{profile.industry}</span>}
+          {/* {profile.industry && <span>{profile.industry}</span>} */}
           <span>{profile.location}</span>
           {profile.pronouns && <span>({profile.pronouns})</span>}
         </div>
         <div className="flex items-center gap-2">
-          {profile.website && (
-            <a href={profile.website} title={profile.website} className={iconButton}>
-              <Icon name="globe" size={14} />
-            </a>
-          )}
           {profile.contacts.map((c) => {
             const iconName = contactIconNames[c.type];
             if (c.type === ContactType.Phone) {
               return (
-                <a key={c.type} href={c.href} title={c.value} className={pillButton}>
+                <a
+                  key={c.type}
+                  href={c.href}
+                  title={c.value}
+                  className={pillButton}
+                >
                   <Icon name={iconName} size={14} />
                   <span className="text-xs">{c.value}</span>
                 </a>
               );
             }
             return (
-              <a key={c.type} href={c.href} title={c.value} className={iconButton}>
-                <Icon name={iconName} size={14} />
+              <a
+                key={c.type}
+                href={c.href}
+                title={c.value}
+                className={iconButton}
+              >
+                <Icon
+                  name={iconName}
+                  size={14}
+                  className={
+                    c.type === ContactType.Telegram
+                      ? "-translate-x-px translate-y-px"
+                      : ""
+                  }
+                />
               </a>
             );
           })}
+          {profile.website && (
+            <a
+              href={profile.website}
+              title={profile.website}
+              className={iconButton}
+            >
+              <Icon name="globe" size={14} />
+            </a>
+          )}
         </div>
       </div>
     </section>

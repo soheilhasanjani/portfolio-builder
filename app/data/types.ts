@@ -106,6 +106,7 @@ export interface FeaturedProject {
 }
 
 export interface ImpactHighlight {
+  icon: string;
   title: string;
   description: string;
 }

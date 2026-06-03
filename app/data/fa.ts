@@ -56,34 +56,24 @@ const fa: Portfolio = {
 
   impact_highlights: [
     {
-      title: "تخصص گسترده در فریم‌ورک‌ها و اکوسیستم",
-      description:
-        "تجربه پروداکشن در React، Next.js، TypeScript، میکروفرانت‌اند (Nx) و دیزاین سیستم (Storybook) همراه با اشراف عمیق به اکوسیستم — مدیریت state (Redux, React Query, Zustand)، فرم (React Hook Form, Zod, Formik) و UI kit ها (Tailwind, MUI, Chakra, Ant Design, shadcn/ui, Radix).",
+      icon: "layers",
+      title: "اکوسیستم فول‌استک",
+      description: "React، Next.js، TypeScript، میکروفرانت‌اند و دیزاین سیستم در بیش از ۸ سال پروداکشن.",
     },
     {
-      title: "وایب‌کدینگ و توسعه با کمک هوش مصنوعی",
-      description:
-        "استفاده روزانه از ابزارهای توسعه مبتنی بر AI — GitHub Copilot، Claude Code و Codex — به‌صورت یکپارچه در چرخه‌های واقعی محصول برای تسریع تحویل فیچرها، ری‌فکتورها و طراحی دیزاین سیستم.",
+      icon: "zap",
+      title: "توسعه با کمک هوش مصنوعی",
+      description: "GitHub Copilot، Claude Code و Codex یکپارچه در چرخه‌های واقعی تحویل محصول.",
     },
     {
-      title: "حوزه‌های متنوع از ابتدا تا انتها",
-      description:
-        "ساخت سیستم‌های پروداکشن در فین‌تک (صرافی رمزارز، فارکس، کیف پول)، سلامت (EMR کلینیک‌های لاکچری)، فروشگاه آنلاین، فضای ۳۶۰ تعاملی (Three.js/GSAP)، ابزارهای رسانه‌ای مبتنی بر AI و اتوماسیون سازمانی.",
+      icon: "globe",
+      title: "تنوع حوزه‌های تحویل‌شده",
+      description: "سیستم‌های پروداکشن در فین‌تک، EMR سلامت، فروشگاه آنلاین، ۳D تعاملی و ابزارهای AI.",
     },
     {
-      title: "UI مالی بلادرنگ تحت محدودیت قابلیت اطمینان",
-      description:
-        "پیاده‌سازی استریم داده بازار با WebSocket برای order book زنده، چارت‌های ترید و UI صرافی پرترافیک که در آن latency و صحت داده مستقیماً اعتماد کاربر و درآمد را تحت تأثیر قرار می‌دهد.",
-    },
-    {
-      title: "معماری چند محصولی و دیزاین سیستم",
-      description:
-        "طراحی و یکسان‌سازی کتابخانه‌های مشترک کامپوننت، الگوهای لایه‌بندی و ساختار پوشه‌ها در سازمان‌های چندمحصولی — به‌تازگی یک اکوسیستم ۴ محصولی wellness و یک پلتفرم micro-frontend صرافی مبتنی بر Nx.",
-    },
-    {
-      title: "مالکیت Full-Stack در صورت نیاز",
-      description:
-        "تجربه گسترش به بک‌اند با NestJS، Prisma، JWT، AWS S3 و Docker — به‌تازگی تحویل یک پلتفرم e-commerce کامل (Next.js storefront، Vite admin، NestJS API) به‌صورت تنها توسعه‌دهنده.",
+      icon: "star",
+      title: "معماری و دیزاین سیستم",
+      description: "کتابخانه‌های مشترک کامپوننت در اکوسیستم ۴ محصولی و میکروفرانت‌اند مبتنی بر Nx.",
     },
   ],
 

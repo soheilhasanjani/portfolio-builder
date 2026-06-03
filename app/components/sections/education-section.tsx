@@ -1,9 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Icon } from "../icons";
 import { type Education } from "../../data/types";
-import { getStack, sortedStackCodes } from "../../../lib/stacks";
 import { formatMonthYear } from "../../../lib/date";
-import { Badge } from "../ui/badge";
 import { Section } from "../section";
 import { Typography } from "../ui/typography";
 
@@ -64,15 +62,6 @@ export async function EducationSection({
             </Typography>
           )}
 
-          {edu.stacks.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {sortedStackCodes(edu.stacks).map((code) => (
-                <Badge key={code} size="sm">
-                  {getStack(code).label}
-                </Badge>
-              ))}
-            </div>
-          )}
         </div>
       ))}
     </Section>

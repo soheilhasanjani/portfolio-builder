@@ -5,7 +5,7 @@ import { cn } from "../../../lib/utils";
 
 export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl";
 type BadgePosition = "top-start" | "top-end" | "bottom-start" | "bottom-end";
-type Spacing = "sm" | "md" | "lg";
+export type Spacing = "sm" | "md" | "lg";
 
 const sizeClasses: Record<AvatarSize, string> = {
   xs: "w-5 h-5 text-[8px]",
@@ -28,7 +28,7 @@ const groupSpacingClasses: Record<Spacing, string> = {
   lg: "[&>*+*]:-ml-3",
 };
 
-interface AvatarProps {
+export interface AvatarProps {
   content: ReactNode;
   size?: AvatarSize;
   badge?: ReactNode;
@@ -66,7 +66,7 @@ export function Avatar({
   );
 }
 
-interface AvatarGroupProps {
+export interface AvatarGroupProps {
   children: ReactNode;
   spacing?: Spacing;
   max?: number;
@@ -95,11 +95,7 @@ export function AvatarGroup({
     >
       {visible}
       {overflow > 0 && (
-        <Avatar
-          content={`+${overflow}`}
-          size={size}
-          className="text-muted"
-        />
+        <Avatar content={`+${overflow}`} size={size} className="text-muted" />
       )}
     </div>
   );

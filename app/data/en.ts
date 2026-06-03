@@ -10,7 +10,7 @@ import {
 const en: Portfolio = {
   profile: {
     first_name: "Soheil",
-    last_name: "Hasanjani Mir",
+    last_name: "Hasanjani",
     headline: "Senior Frontend Engineer",
     industry: "Computer Software",
     location: "Tehran, Iran",
@@ -18,14 +18,14 @@ const en: Portfolio = {
     status: ProfileStatus.OpenToWork,
     contacts: [
       {
-        type: ContactType.Email,
-        value: "soheilhasanjani@gmail.com",
-        href: "mailto:soheilhasanjani@gmail.com",
-      },
-      {
         type: ContactType.Phone,
         value: "+98 939 028 6828",
         href: "tel:+989390286828",
+      },
+      {
+        type: ContactType.Email,
+        value: "soheilhasanjani@gmail.com",
+        href: "mailto:soheilhasanjani@gmail.com",
       },
       {
         type: ContactType.GitHub,
@@ -56,34 +56,28 @@ const en: Portfolio = {
 
   impact_highlights: [
     {
-      title: "Broad framework & ecosystem expertise",
+      icon: "layers",
+      title: "Modern web architecture",
       description:
-        "Production experience across React, Next.js, TypeScript, micro-frontends (Nx), and design systems (Storybook), with deep familiarity in the wider ecosystem — state (Redux, React Query, Zustand), forms (React Hook Form, Zod, Formik), and UI kits (Tailwind, MUI, Chakra, Ant Design, shadcn/ui, Radix).",
+        "Built and scaled React, Next.js, and TypeScript applications using design systems and reusable components.",
     },
     {
-      title: "Vibe coding with AI-assisted delivery",
+      icon: "zap",
+      title: "AI-enhanced engineering workflow",
       description:
-        "Daily driver of AI development workflows — GitHub Copilot, Claude Code, and Codex — integrated into real product delivery cycles to accelerate feature shipping, refactors, and design-system authoring.",
+        "Leveraged Claude Code and OpenAI tools to streamline development and accelerate delivery.",
     },
     {
-      title: "Diverse domains shipped end-to-end",
+      icon: "globe",
+      title: "Cross-industry experience",
       description:
-        "Built production systems across FinTech (crypto exchanges, forex, wallets), healthcare (EMR for luxury wellness clinics), e-commerce (storefronts + admin panels), interactive 3D retail (Three.js/GSAP), AI media tools, and enterprise automation.",
+        "Shipped production software across FinTech, healthcare, e-commerce, and real-time trading systems.",
     },
     {
-      title: "Real-time financial UI under reliability constraints",
+      icon: "star",
+      title: "Design systems & scalability",
       description:
-        "Implemented WebSocket-based market-data streaming for live order books, trading charts, and high-throughput exchange UIs where latency and correctness directly affect user trust and revenue.",
-    },
-    {
-      title: "Cross-product architecture & design systems",
-      description:
-        "Designed and standardized shared component libraries, layout patterns, and folder structures across multi-product organizations — most recently a 4-product wellness ecosystem and an Nx-based micro-frontend exchange platform.",
-    },
-    {
-      title: "Full-stack ownership when scope requires it",
-      description:
-        "Comfortable extending into backend with NestJS, Prisma, JWT, AWS S3, and Docker — most recently shipping an end-to-end e-commerce platform (Next.js storefront, Vite admin, NestJS API) as the sole developer.",
+        "Built reusable UI components and design systems across multiple products, improving consistency and scalability.",
     },
   ],
 
@@ -120,6 +114,7 @@ const en: Portfolio = {
             "react-query",
             "zustand",
             "axios",
+            "claude",
           ],
         },
         {
@@ -135,6 +130,7 @@ const en: Portfolio = {
             "react-query",
             "zustand",
             "axios",
+            "claude",
           ],
         },
         {
@@ -150,12 +146,13 @@ const en: Portfolio = {
             "react-query",
             "zustand",
             "axios",
+            "claude",
           ],
         },
         {
           title: "Hoopoe Home Care",
           type: ExperienceType.Project,
-          value: 60,
+          value: 80,
           description:
             "In-home medical and aesthetic services product within the Hoopoe ecosystem, covering booking, support, and service delivery for at-home treatments in Dubai.",
           stacks: [
@@ -165,6 +162,7 @@ const en: Portfolio = {
             "react-query",
             "zustand",
             "axios",
+            "claude",
           ],
         },
       ],
@@ -203,6 +201,7 @@ const en: Portfolio = {
             "micro-frontends",
             "storybook",
             "nx",
+            "openai",
           ],
         },
         {
@@ -220,6 +219,7 @@ const en: Portfolio = {
             "micro-frontends",
             "storybook",
             "nx",
+            "openai",
           ],
         },
       ],
@@ -261,7 +261,7 @@ const en: Portfolio = {
         {
           title: "Message Engineering",
           type: ExperienceType.Project,
-          value: 65,
+          value: 80,
           description:
             "Social-network analysis platform built around cognitive-science parameters, with content generation for social channels and extensive analytical charting.",
           stacks: [
@@ -438,7 +438,14 @@ const en: Portfolio = {
           value: 25,
           description:
             "Marketing site for the Parsiz Teb clinic and hospital management suite.",
-          stacks: ["html5", "css3", "javascript", "jquery", "bootstrap", "gulp"],
+          stacks: [
+            "html5",
+            "css3",
+            "javascript",
+            "jquery",
+            "bootstrap",
+            "gulp",
+          ],
         },
         {
           title: "Parsiz Office Automation",
@@ -463,7 +470,14 @@ const en: Portfolio = {
           value: 25,
           description:
             "Corporate site presenting the company's full product portfolio.",
-          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery", "gulp"],
+          stacks: [
+            "html5",
+            "css3",
+            "bootstrap",
+            "javascript",
+            "jquery",
+            "gulp",
+          ],
         },
       ],
     },
@@ -486,20 +500,21 @@ const en: Portfolio = {
       ],
       children: [
         {
-          title: "Eshgh o Choob",
-          type: ExperienceType.Project,
-          value: 35,
-          description:
-            "E-commerce site for handcrafted wooden marquetry and engraving products, with product pages integrated into an MVC backend.",
-          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery", "gulp", "swiper"],
-        },
-        {
           title: "Daadyab",
           type: ExperienceType.Project,
           value: 45,
           description:
             "Legal-tech platform connecting lawyers and clients for case referrals, lawyer comparison, and online consultations.",
-          stacks: ["html5", "css3", "bootstrap", "javascript", "jquery", "gulp", "swiper", "leaflet"],
+          stacks: [
+            "html5",
+            "css3",
+            "bootstrap",
+            "javascript",
+            "jquery",
+            "gulp",
+            "swiper",
+            "leaflet",
+          ],
         },
         {
           title: "Babol Carpet",
@@ -507,7 +522,16 @@ const en: Portfolio = {
           value: 40,
           description:
             "E-commerce site and admin panel for a long-established carpet and tufted-moquette manufacturer that exports to 20+ countries.",
-          stacks: ["html5", "css3", "javascript", "jquery", "gulp", "bootstrap", "swiper", "leaflet"],
+          stacks: [
+            "html5",
+            "css3",
+            "javascript",
+            "jquery",
+            "gulp",
+            "bootstrap",
+            "swiper",
+            "leaflet",
+          ],
         },
       ],
     },
@@ -567,14 +591,20 @@ const en: Portfolio = {
           title: "Driving-Assistance Object Detection Platform",
           type: ExperienceType.Project,
           role: "Senior Frontend Engineer",
-          value: 65,
+          value: 80,
           description:
             "Web dashboard that frame-splits driving video and lets users tag objects (e.g., 'white car'), then visualizes per-frame detections.",
           responsibilities: [
             "Engineered client-side video frame-splitting with FFmpeg.wasm for in-browser processing without server roundtrips",
             "Built a per-frame object annotation interface feeding labeled data into the detection model pipeline",
           ],
-          stacks: ["react", "typescript", "tailwindcss", "react-query", "ffmpeg"],
+          stacks: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "react-query",
+            "ffmpeg",
+          ],
         },
         {
           title: "Cosmetics E-Commerce Site",
@@ -619,46 +649,7 @@ const en: Portfolio = {
             "Delivered a self-custody crypto wallet with multi-asset management, transfer, and swap functionality",
             "Implemented real-time portfolio and transaction history tracking with Redux and React Query",
           ],
-          stacks: [
-            "nextjs",
-            "react",
-            "redux",
-            "react-query",
-            "tailwindcss",
-          ],
-        },
-        {
-          title: "Tabasgardi",
-          type: ExperienceType.Project,
-          role: "Senior Frontend Engineer",
-          value: 20,
-          description: "Promotional landing page for a travel and tourism service.",
-          responsibilities: [
-            "Built a responsive promotional travel landing page with Bootstrap layout and a Gulp-based asset optimization pipeline",
-          ],
-          stacks: ["html5", "css3", "sass", "gulp", "bootstrap"],
-        },
-        {
-          title: "Hermes Shop",
-          type: ExperienceType.Project,
-          role: "Senior Frontend Engineer",
-          value: 25,
-          description: "Template-based e-commerce frontend for a retail brand.",
-          responsibilities: [
-            "Developed a template-engine-driven e-commerce frontend with Handlebars and a Gulp-automated build pipeline",
-          ],
-          stacks: ["handlebars", "tailwindcss", "gulp", "bootstrap"],
-        },
-        {
-          title: "Quiz",
-          type: ExperienceType.Project,
-          role: "Senior Frontend Engineer",
-          value: 30,
-          description: "Interactive quiz interface with chart visualizations and a carousel-driven UI.",
-          responsibilities: [
-            "Implemented an interactive quiz platform with Chart.js-powered analytics and a Swiper-driven carousel UI",
-          ],
-          stacks: ["handlebars", "vite", "tailwindcss", "swiper", "chartjs"],
+          stacks: ["nextjs", "react", "redux", "react-query", "tailwindcss"],
         },
       ],
     },

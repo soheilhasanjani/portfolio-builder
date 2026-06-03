@@ -56,13 +56,21 @@ function ExperienceBody({
       {(locationParts || exp.period) && (
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {locationParts && (
-            <Typography variant="label" component="p" className="inline-flex items-center gap-1">
+            <Typography
+              variant="label"
+              component="p"
+              className="inline-flex items-center gap-1"
+            >
               <Icon name="map-pin" size={11} />
               {locationParts}
             </Typography>
           )}
           {exp.period && (
-            <Typography variant="label" component="p" className="inline-flex items-center gap-1">
+            <Typography
+              variant="label"
+              component="p"
+              className="inline-flex items-center gap-1"
+            >
               <Icon name="clock" size={11} />
               {formatPeriod(exp.period.start)} – {formatPeriod(exp.period.end)}
               {" · "}
@@ -99,7 +107,10 @@ function ExperienceBody({
       {exp.description && (
         <Typography
           variant="body"
-          className={cn("compact:hidden", hasResponsibilities && "text-muted-bright")}
+          className={cn(
+            "compact:hidden",
+            hasResponsibilities && "text-muted-bright",
+          )}
         >
           {exp.description}
         </Typography>
@@ -118,7 +129,6 @@ function ExperienceBody({
     </>
   );
 }
-
 
 export function ExperienceNode({
   exp,
