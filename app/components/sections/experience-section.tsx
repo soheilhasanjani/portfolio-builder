@@ -32,7 +32,10 @@ export async function ExperienceSection({
   }
 
   return (
-    <Section icon={<Icon name="briefcase" size={12} />} title={tSections("experience")}>
+    <Section
+      icon={<Icon name="briefcase" size={12} />}
+      title={tSections("experience")}
+    >
       <div>
         {experience.map((exp, i) => (
           <ExperienceNode

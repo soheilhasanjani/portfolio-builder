@@ -78,6 +78,28 @@ export async function GET(request: Request) {
 
     await page.goto(targetUrl, { waitUntil: "networkidle0", timeout: 30000 });
 
+    // Scroll through the full page so lazy-loaded images (Next.js Image default)
+    // enter the viewport and trigger their network requests before we capture.
+    await page.evaluate(async () => {
+      await new Promise<void>((resolve) => {
+        const distance = 400;
+        const timer = setInterval(() => {
+          window.scrollBy(0, distance);
+          if (
+            window.scrollY + window.innerHeight >=
+            document.documentElement.scrollHeight
+          ) {
+            window.scrollTo(0, 0);
+            clearInterval(timer);
+            resolve();
+          }
+        }, 80);
+      });
+    });
+
+    // Wait for any newly-triggered image requests to complete.
+    await page.waitForNetworkIdle({ idleTime: 500, timeout: 15000 });
+
     // Inject styles to hide floating UI and Next dev indicator, and clean
     // up padding around the document.
     await page.addStyleTag({ content: HIDE_NOISE_CSS });

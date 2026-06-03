@@ -9,7 +9,13 @@ export async function AboutSection({ about }: { about: About }) {
 
   return (
     <Section icon={<Icon name="user" size={12} />} title={tSections("about")}>
-      <Typography variant="body-lg">{about.summary}</Typography>
+      <div className="space-y-3">
+        {about.summary.split("\n\n").map((para, i) => (
+          <Typography key={i} variant="body-lg">
+            {para}
+          </Typography>
+        ))}
+      </div>
     </Section>
   );
 }

@@ -15,7 +15,6 @@ type TFunc = (key: string) => string;
 
 interface Props {
   exp: Experience;
-  isFirst?: boolean;
   isLast?: boolean;
   formatPeriod: (d: string) => string;
   formatDuration: (start: string, end: string) => string;
@@ -38,6 +37,7 @@ interface BodyProps {
   formatDuration: (start: string, end: string) => string;
   tEmp: TFunc;
   tLoc: TFunc;
+  isProject?: boolean;
 }
 
 function ExperienceBody({
@@ -47,6 +47,7 @@ function ExperienceBody({
   formatDuration,
   tEmp,
   tLoc,
+  isProject = false,
 }: BodyProps) {
   const hasResponsibilities =
     !!exp.responsibilities && exp.responsibilities.length > 0;
@@ -108,7 +109,7 @@ function ExperienceBody({
         <Typography
           variant="body"
           className={cn(
-            "compact:hidden",
+            isProject && "compact:hidden",
             hasResponsibilities && "text-muted-bright",
           )}
         >
@@ -118,7 +119,7 @@ function ExperienceBody({
 
       {/* Responsibilities */}
       {hasResponsibilities && (
-        <ul className="space-y-3">
+        <ul className={cn("space-y-3", isProject && "compact:hidden")}>
           {exp.responsibilities!.map((r, i) => (
             <Note key={i} type="success">
               {r}
@@ -132,7 +133,6 @@ function ExperienceBody({
 
 export function ExperienceNode({
   exp,
-  isFirst = true,
   isLast = true,
   formatPeriod,
   formatDuration,
@@ -156,6 +156,7 @@ export function ExperienceNode({
       formatDuration={formatDuration}
       tEmp={tEmp}
       tLoc={tLoc}
+      isProject={isProject}
     />
   );
 
@@ -166,7 +167,6 @@ export function ExperienceNode({
         showFlame={isHotProject}
         stacks={exp.stacks}
         stackLimit={8}
-        className={cn(isFirst && "rounded-t-md", isLast && "rounded-b-md")}
       >
         {body}
       </ProjectCard>
@@ -197,12 +197,11 @@ export function ExperienceNode({
 
         {/* Nested projects */}
         {children.length > 0 && (
-          <div className="pt-6 flex flex-col gap-0.5">
+          <div className="pt-6 grid grid-cols-2 gap-0.5">
             {children.map((child, i) => (
               <ExperienceNode
                 key={child.title}
                 exp={child as Experience}
-                isFirst={i === 0}
                 isLast={i === children.length - 1}
                 formatPeriod={formatPeriod}
                 formatDuration={formatDuration}

@@ -51,7 +51,7 @@ const en: Portfolio = {
 
   about: {
     summary:
-      "Senior Frontend Engineer with 8+ years of experience building production web platforms across FinTech (crypto exchanges, forex, wallets), healthcare, and enterprise systems. Specialized in React, Next.js, TypeScript, micro-frontends, and design systems, with a strong track record of contributing to architecture and technology decisions across cross-functional teams. Experienced in designing scalable frontend solutions, modernizing legacy applications, and delivering high-performance user experiences. Comfortable extending into backend development with NestJS, Prisma, and Docker when end-to-end ownership is required. Experienced working remotely with international teams across UAE, Armenia, and North America.",
+      'Senior Frontend Engineer with 8+ years of experience building scalable web applications in FinTech, healthcare, e-commerce, and enterprise domains. Focused on frontend architecture, performance, and developer experience, with a strong track record of modernizing legacy systems and delivering production-grade products.\n\nExperienced in React and Next.js ecosystems, design systems, and scalable UI architecture, including state management and data-fetching strategies for complex applications. Recently leveraged AI-assisted development and "vibe coding" workflows to speed up delivery while maintaining clean, maintainable code.\n\nComfortable working across the stack when needed (Node.js, NestJS, Prisma, REST, WebSockets) and collaborating with distributed teams across UAE, Armenia, and North America.',
   },
 
   impact_highlights: [
@@ -59,25 +59,25 @@ const en: Portfolio = {
       icon: "layers",
       title: "Modern web architecture",
       description:
-        "Built and scaled React, Next.js, and TypeScript applications using design systems and reusable components.",
+        "Built scalable React, Next.js, and TypeScript applications with clean architecture and reusable UI systems.",
     },
     {
       icon: "zap",
       title: "AI-enhanced engineering workflow",
       description:
-        "Leveraged Claude Code and OpenAI tools to streamline development and accelerate delivery.",
+        "Used Claude Code and OpenAI tools to speed up development, debugging, and delivery.",
     },
     {
       icon: "globe",
       title: "Cross-industry experience",
       description:
-        "Shipped production software across FinTech, healthcare, e-commerce, and real-time trading systems.",
+        "Shipped production software for FinTech, healthcare, e-commerce, and real-time trading products.",
     },
     {
       icon: "star",
       title: "Design systems & scalability",
       description:
-        "Built reusable UI components and design systems across multiple products, improving consistency and scalability.",
+        "Improved UI consistency by building shared components and design systems across multiple products.",
     },
   ],
 
@@ -86,19 +86,16 @@ const en: Portfolio = {
       title: "Elegant Hoopoe",
       type: ExperienceType.Company,
       role: "Senior Frontend Engineer",
-      employment_type: EmploymentType.Contract,
+      employment_type: EmploymentType.FullTime,
       location_type: LocationType.Remote,
       location: { country: "United Arab Emirates", city: "Dubai" },
-      period: { start: "2025-06", end: "2026-03" },
+      period: { start: "2025-04", end: "2026-04" },
       description:
-        "Premium slimming, aesthetics, and wellness brand operating across the UAE, building an integrated product ecosystem covering EMR, nutrition, distribution, and at-home care.",
+        "Luxury wellness and aesthetics company based in Dubai, specializing in non-invasive body contouring, weight management, skin rejuvenation, and personalized wellness treatments through advanced medical technologies.",
       responsibilities: [
-        "Defined cross-product frontend architecture patterns across 4 product lines within the unified wellness ecosystem; collaborated within a ~6-engineer frontend team in a ~40-person cross-functional organization",
-        "Built and maintained a shared component system of ~10–30 reusable UI components adopted across EMR, nutrition, and care delivery products",
-        "Standardized authentication, routing, layout, and folder organization patterns to ensure consistency and scalability across all 4 products",
-        "Orchestrated server/client state with React Query and Zustand; integrated REST APIs across the product ecosystem",
-        "Led significant refactoring to resolve performance bottlenecks and complex frontend bugs causing UI degradation across key user flows",
-        "Participated in cross-functional technical decision-making with product, design, and backend teams",
+        "Refactored the frontend codebase to improve maintainability, developer experience, and overall performance",
+        "Developed 10+ reusable UI components with well-defined APIs, increasing consistency across the application",
+        "Contributed to architecture and technology decisions, and provided technical support and code reviews across the frontend team",
       ],
       children: [
         {
@@ -106,7 +103,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 90,
           description:
-            "Next-generation EMR for luxury wellness clinics. Integrates booking, customer engagement, loyalty, real-time treatment tracking, and AI-assisted workflow automation aimed at reducing no-shows and improving staff productivity.",
+            "EMR platform for luxury wellness clinics with booking, customer engagement, loyalty, real-time treatment tracking, and AI-assisted workflows.",
           stacks: [
             "nextjs",
             "react",
@@ -122,7 +119,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 65,
           description:
-            "AI-driven nutrition and lifestyle platform inside the Hoopoe ecosystem. Translates everyday actions — meals, training, sleep, recovery — into measurable, clinically validated outcomes, supported by an extensive library of professional training content.",
+            "AI nutrition and lifestyle platform that tracks meals, training, sleep, and recovery against measurable health goals.",
           stacks: [
             "nextjs",
             "react",
@@ -138,7 +135,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 55,
           description:
-            "Internal Hoopoe brand and project — the official distributor of Cutera — focused on aesthetics and dermatology products. Built the customer-facing surface for the brand.",
+            "Customer-facing website for Grishana, the official Cutera distributor for aesthetics and dermatology products.",
           stacks: [
             "nextjs",
             "react",
@@ -154,7 +151,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 80,
           description:
-            "In-home medical and aesthetic services product within the Hoopoe ecosystem, covering booking, support, and service delivery for at-home treatments in Dubai.",
+            "At-home medical and aesthetic services product for booking, support, and service delivery in Dubai.",
           stacks: [
             "nextjs",
             "react",
@@ -171,19 +168,18 @@ const en: Portfolio = {
       title: "Coinlocally",
       type: ExperienceType.Company,
       role: "Senior Frontend Engineer",
-      employment_type: EmploymentType.FullTime,
+      employment_type: EmploymentType.Contract,
       location_type: LocationType.Remote,
       location: { country: "Armenia", city: "Yerevan" },
-      period: { start: "2024-11", end: "2025-06" },
+      period: { start: "2024-10", end: "2025-04" },
       description:
-        "Approved Bybit broker offering trading and investing across spot, demo, copy trading, and bot trading, with onboarding paths from beginner to pro.",
+        "Approved Bybit broker offering spot trading, demo trading, copy trading, and trading bots.",
       responsibilities: [
-        "Drove frontend architecture decisions for the scalable crypto trading platform, including an Nx-based micro-frontend split into 4 independently deployable exchange products",
-        "Contributed within a 4-engineer frontend team inside a ~15-person product organization; led technology selection across the React ecosystem, state management, and API integration patterns",
-        "Designed and shipped a company-wide UI component library of ~10–15 core reusable components, documented with Storybook",
-        "Owned UI architecture and modularization strategy for the multi-module exchange platform",
-        "Defined the performance optimization and refactoring direction for the legacy frontend codebase, improving scalability and long-term maintainability",
-        "Delivered seasonal branded trading experiences tied to major global holidays across all platform surfaces",
+        "Split the exchange platform into 4 Nx-based micro-frontends for independent releases",
+        "Contributed to React architecture, state management, API integration, and UI design decisions",
+        "Built and documented 10+ reusable React components in Storybook",
+        "Refactored legacy code and improved frontend maintainability",
+        "Delivered trading and marketing features using Next.js, React, Redux, Tailwind CSS, and Ant Design",
       ],
       children: [
         {
@@ -191,7 +187,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 95,
           description:
-            "Main cryptocurrency exchange platform supporting spot, demo, copy trading, and bot trading, with seasonal branded experiences for major holidays.",
+            "Main crypto exchange platform supporting spot trading, demo trading, copy trading, trading bots, and branded campaigns.",
           stacks: [
             "nextjs",
             "react",
@@ -209,7 +205,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 70,
           description:
-            "Standalone forex-trading platform within the Coinlocally ecosystem, offering currency pair trading alongside the main exchange.",
+            "Forex trading platform inside the Coinlocally ecosystem for currency pair trading.",
           stacks: [
             "nextjs",
             "react",
@@ -227,20 +223,19 @@ const en: Portfolio = {
     {
       title: "Innovation Center of Cognitive Sciences and Technologies, IUST",
       type: ExperienceType.Company,
-      role: "Senior Frontend Engineer, Frontend Lead",
+      role: "Senior Frontend Developer, Frontend Lead",
       employment_type: EmploymentType.FullTime,
       location_type: LocationType.OnSite,
       location: { country: "Iran", city: "Tehran" },
-      period: { start: "2022-12", end: "2024-09" },
+      period: { start: "2023-03", end: "2024-08" },
       description:
-        "Interdisciplinary R&D center at Iran University of Science and Technology working at the intersection of AI, cognitive sciences, and social science.",
+        "R&D center at Iran University of Science and Technology focused on AI, cognitive science, and social science.",
       responsibilities: [
-        "Served as Frontend Lead within a 6–7 engineer frontend team in a 20–30 person R&D organization; led architecture and technology decisions across multiple data-intensive systems",
-        "Architected and delivered 5+ admin panels and analytics dashboards for research and operational use cases",
-        "Built complex data visualization interfaces handling datasets up to hundreds of thousands of records, with multi-chart filtering and interactive analytics",
-        "Standardized shadcn/ui and pnpm across the portfolio, authoring shared component and layout patterns",
-        "Developed a mobile-first PWA and a Chrome Extension as complementary platform surfaces",
-        "Drove performance optimization and frontend scalability for data-heavy applications",
+        "Led frontend architecture for multiple data-heavy systems in a 6-7 engineer frontend team and a 20-30 person R&D organization",
+        "Delivered 5+ admin panels and analytics dashboards for research, operations, and social-network analysis",
+        "Built data visualization interfaces for datasets with hundreds of thousands of records, multi-chart filters, and interactive analytics",
+        "Improved delivery speed by setting shared shadcn/ui, pnpm, component, and layout patterns across projects",
+        "Expanded platform access by building a mobile-first PWA and a Chrome Extension",
       ],
       children: [
         {
@@ -263,7 +258,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 80,
           description:
-            "Social-network analysis platform built around cognitive-science parameters, with content generation for social channels and extensive analytical charting.",
+            "Social-network analysis platform with cognitive-science metrics, content generation, and analytical charts.",
           stacks: [
             "nextjs",
             "react",
@@ -279,7 +274,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 80,
           description:
-            "First-generation centralized platform that connects to social networks and lets operators manage accounts at scale (likes, comments, content generation, etc.) in a human-like fashion.",
+            "Central platform for managing social-network accounts, actions, comments, and generated content at scale.",
           stacks: [
             "nextjs",
             "react",
@@ -300,7 +295,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 70,
           description:
-            "Mobile-first PWA bundling training videos and messenger-channel broadcasting for campaign operators. Delivered as two applications — a client app for end users and an admin panel for content and operations.",
+            "Mobile-first PWA with training videos and messenger broadcasting, delivered as a client app and an admin panel.",
           stacks: [
             "nextjs",
             "react",
@@ -324,20 +319,19 @@ const en: Portfolio = {
     {
       title: "Saminray ICT",
       type: ExperienceType.Company,
-      role: "Senior Frontend Engineer, Frontend Lead",
+      role: "Senior Frontend Developer, Frontend Lead",
       employment_type: EmploymentType.FullTime,
       location_type: LocationType.OnSite,
       location: { country: "Iran", city: "Babol" },
-      period: { start: "2021-05", end: "2022-12" },
+      period: { start: "2021-07", end: "2023-01" },
       description:
-        "Fintech company (founded 2002) specializing in core banking, card and payment solutions, Islamic banking, and BI for small- to medium-sized banks.",
+        "FinTech company building core banking, card and payment systems, Islamic banking, and BI products.",
       responsibilities: [
-        "Progressed from Frontend Engineer to Frontend Lead, defining frontend architecture and technical direction for a 4–5 engineer frontend team within a 10–15 person cross-functional organization",
-        "Led development of the company's first real-time crypto exchange platform with SSR via Next.js for SEO-optimized financial pages",
-        "Implemented WebSocket-based market-data streaming for real-time order books, live trading charts, and high-performance financial UI under strict reliability and latency requirements",
-        "Built and rolled out a shared frontend starter template adopted across all company projects, standardizing scaffolding and engineering practices",
-        "Mentored frontend engineers and guided implementation practices across the team",
-        "Collaborated with DevOps to Dockerize frontend apps and tune custom Webpack production bundles",
+        "Promoted from Frontend Engineer to Frontend Lead by setting frontend architecture and technical direction for a 4-5 engineer team",
+        "Led the company's first real-time crypto exchange frontend using Next.js SSR for SEO-friendly financial pages",
+        "Improved live trading UX by building WebSocket market-data streams for order books, trading charts, and financial dashboards",
+        "Reduced project setup work by creating a shared frontend starter template used across company projects",
+        "Improved production delivery by working with DevOps on Dockerized frontend apps and custom Webpack builds",
       ],
       children: [
         {
@@ -382,15 +376,13 @@ const en: Portfolio = {
       employment_type: EmploymentType.FullTime,
       location_type: LocationType.Remote,
       location: { country: "Canada", city: "Chilliwack, British Columbia" },
-      period: { start: "2020-12", end: "2021-09" },
+      period: { start: "2020-07", end: "2021-07" },
       description:
-        "Marketing-services platform connecting businesses with influencers in a controlled, transaction-driven environment that bypasses noisy DM flows.",
+        "Marketing platform connecting businesses with influencers through paid campaign flows.",
       responsibilities: [
-        "Delivered features async across timezones with the Canada-based team, establishing remote engineering workflows from scratch",
-        "Rebuilt the project architecture from scratch, significantly improving codebase organization and developer experience",
-        "Integrated social media platform APIs (TikTok, Facebook) to enable automated influencer campaign flows",
-        "Enforced robust form validation with Formik and Yup across onboarding and transactional user flows",
-        "Shipped a high volume of features under rapid iteration cycles using Next.js and TypeScript",
+        "Improved code quality by rebuilding the frontend architecture from scratch with Next.js and TypeScript",
+        "Enabled automated campaign flows by integrating TikTok and Facebook APIs",
+        "Reduced form errors by adding reliable Formik and Yup validation across onboarding and payment-related flows",
       ],
       children: [
         {
@@ -398,7 +390,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 55,
           description:
-            "Platform that lets influencers publish priced offers via shareable profile URLs (e.g. localinfluencers.io/bbc) and lets businesses book paid promotions in a few steps.",
+            "Platform where influencers publish paid offers through shareable profiles and businesses book promotions in a few steps.",
           stacks: [
             "typescript",
             "react",
@@ -421,15 +413,14 @@ const en: Portfolio = {
       employment_type: EmploymentType.FullTime,
       location_type: LocationType.Hybrid,
       location: { country: "Iran", city: "Sari" },
-      period: { start: "2020-03", end: "2021-05" },
+      period: { start: "2019-07", end: "2020-07" },
       description:
-        "Software company (founded 2003) building financial, administrative, and clinical software, including the Parsiz Teb clinic/hospital management suite and the Obak backup product.",
+        "Software company building financial, office automation, and clinic management products.",
       responsibilities: [
-        "Introduced React as the company's primary frontend stack, replacing legacy jQuery codebases and establishing reusable component patterns and a scalable project architecture",
-        "Implemented real-time video conferencing with WebRTC inside the enterprise office automation platform",
-        "Integrated REST APIs via Swagger, resolving CORS, multipart form-data, and binary blob response challenges",
-        "Extended and maintained legacy HTML/jQuery codebases alongside the modern React-based product suite",
-        "Applied React Query and Ant Design to deliver consistent, data-driven UI components across the automation product",
+        "Modernized the frontend stack by introducing React, reusable components, and scalable project structure alongside legacy jQuery products",
+        "Added real-time video conferencing to the office automation product using WebRTC",
+        "Improved API integration reliability by connecting Swagger-based REST APIs and handling CORS, multipart uploads, and binary file responses",
+        "Delivered consistent data-driven screens using React Query and Ant Design",
       ],
       children: [
         {
@@ -452,7 +443,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 60,
           description:
-            "Enterprise office automation web application with a broad feature set covering document management, task tracking, and complex multi-step approval workflows.",
+            "Enterprise office automation app for document management, task tracking, and multi-step approvals.",
           stacks: [
             "react",
             "redux",
@@ -488,15 +479,14 @@ const en: Portfolio = {
       employment_type: EmploymentType.FullTime,
       location_type: LocationType.OnSite,
       location: { country: "Iran", city: "Babol" },
-      period: { start: "2018-09", end: "2020-03" },
+      period: { start: "2018-07", end: "2019-07" },
       description:
-        "Knowledge-based IT services company delivering solutions across networking, software development, and AI.",
+        "IT services company delivering networking, software, and AI solutions.",
       responsibilities: [
-        "Delivered responsive e-commerce and corporate web projects across multiple industries as the primary frontend developer",
-        "Collaborated directly with clients and business owners, translating requirements into production-ready interfaces",
-        "Automated asset optimization pipelines with Gulp and Grunt, reducing image, HTML, and CSS bundle sizes",
-        "Integrated Leaflet.js maps and Swiper-powered carousels into multiple client-facing applications",
-        "Built hands-on experience with diverse JavaScript libraries, establishing the foundation for modern framework adoption",
+        "Delivered responsive e-commerce and corporate websites as the primary frontend developer",
+        "Improved client delivery by turning business requirements into production-ready HTML, CSS, and JavaScript interfaces",
+        "Reduced static asset size by automating image, HTML, and CSS optimization with Gulp and Grunt",
+        "Added interactive maps and carousels to client websites using Leaflet.js and Swiper",
       ],
       children: [
         {
@@ -521,7 +511,7 @@ const en: Portfolio = {
           type: ExperienceType.Project,
           value: 40,
           description:
-            "E-commerce site and admin panel for a long-established carpet and tufted-moquette manufacturer that exports to 20+ countries.",
+            "E-commerce site and admin panel for a carpet and tufted-moquette manufacturer exporting to 20+ countries.",
           stacks: [
             "html5",
             "css3",
@@ -536,13 +526,13 @@ const en: Portfolio = {
       ],
     },
     {
-      title: "Freelance",
+      title: "Freelance Software Engineer",
       type: ExperienceType.Company,
       employment_type: EmploymentType.Freelance,
       location_type: LocationType.Remote,
-      period: { start: "2020-01", end: "present" },
+      period: { start: "2019-07", end: "present" },
       description:
-        "Independent client work spanning e-commerce, AI-assisted media tooling, computer-vision dashboards, crypto wallets, interactive 3D retail experiences, and landing pages.",
+        "Independent client work across e-commerce, AI media tools, computer-vision dashboards, crypto wallets, 3D retail, and landing pages.",
       children: [
         {
           title: "MS Cosmetic",
@@ -551,11 +541,11 @@ const en: Portfolio = {
           period: { start: "2024-12", end: "present" },
           value: 90,
           description:
-            "End-to-end build of a cosmetics and personal-care e-commerce platform with a customer-facing site and a dedicated admin panel, covering both frontend and backend.",
+            "Full-stack cosmetics e-commerce platform with a storefront, admin panel, REST API, media storage, and deployment setup.",
           responsibilities: [
-            "Sole developer across the full stack: Next.js storefront, Vite admin panel, NestJS REST API, Prisma ORM, and Docker infrastructure",
-            "Implemented JWT authentication, AWS S3 media management, real-time WebSocket notifications, and containerized deployment",
-            "First end-to-end full-stack ownership — responsible for architecture decisions across frontend, backend, and DevOps",
+            "Delivered the full platform as the sole developer using Next.js, Vite, NestJS, Prisma, Docker, and AWS S3",
+            "Improved platform security and operations by adding JWT authentication, media management, WebSocket notifications, and containerized deployment",
+            "Owned architecture decisions across frontend, backend, database, and deployment",
           ],
           stacks: [
             "nextjs",
@@ -580,10 +570,10 @@ const en: Portfolio = {
           role: "Senior Frontend Engineer",
           value: 75,
           description:
-            "AI-powered audio editing studio: upload an audio file, generate a transcript, then edit the waveform or the transcript with full bidirectional sync.",
+            "AI audio editing studio where users upload audio, generate a transcript, and edit the audio from the waveform or text.",
           responsibilities: [
-            "Built a bidirectional waveform-transcript sync editor enabling simultaneous waveform and text-based audio editing",
-            "Implemented an interactive audio visualization environment for a browser-native, timeline-driven editing experience",
+            "Improved editing speed by building two-way sync between the audio waveform and transcript text",
+            "Built browser-native timeline editing and audio visualization with React, Vite, and TypeScript",
           ],
           stacks: ["react", "vite", "typescript", "chakra-ui", "react-query"],
         },
@@ -593,10 +583,10 @@ const en: Portfolio = {
           role: "Senior Frontend Engineer",
           value: 80,
           description:
-            "Web dashboard that frame-splits driving video and lets users tag objects (e.g., 'white car'), then visualizes per-frame detections.",
+            "Web dashboard that splits driving videos into frames, lets users tag objects, and shows per-frame detections.",
           responsibilities: [
-            "Engineered client-side video frame-splitting with FFmpeg.wasm for in-browser processing without server roundtrips",
-            "Built a per-frame object annotation interface feeding labeled data into the detection model pipeline",
+            "Reduced server processing needs by splitting video frames in the browser with FFmpeg.wasm",
+            "Built a per-frame object annotation UI that feeds labeled data into the detection model pipeline",
           ],
           stacks: [
             "react",
@@ -614,8 +604,8 @@ const en: Portfolio = {
           description:
             "E-commerce platform for a cosmetics and personal-care brand with a full product catalog and checkout flow.",
           responsibilities: [
-            "Delivered a complete e-commerce platform with product catalog, cart, checkout flow, and a dedicated admin management panel",
-            "Applied SSR with Next.js for SEO-optimized product and category pages with fast initial page loads",
+            "Delivered product catalog, cart, checkout, and admin management features for a cosmetics e-commerce platform",
+            "Improved SEO and first page load by using Next.js SSR for product and category pages",
           ],
           stacks: [
             "nextjs",
@@ -631,10 +621,10 @@ const en: Portfolio = {
           role: "Senior Frontend Engineer",
           value: 70,
           description:
-            "E-commerce experience with 360°/panoramic views of retail spaces and clickable in-scene products, giving customers an in-store feel from the browser.",
+            "E-commerce experience with 360° retail views and clickable products inside the scene.",
           responsibilities: [
-            "Built a 360°/panoramic 3D retail environment with Three.js and GSAP, enabling clickable in-scene product interactions",
-            "Delivered an immersive WebGL-based shopping experience replicating in-store browsing from the browser",
+            "Improved online shopping discovery by building a 360° 3D retail environment with Three.js and GSAP",
+            "Added clickable in-scene product interactions for a browser-based WebGL shopping experience",
           ],
           stacks: ["nextjs", "react", "three", "mui", "gsap", "axios"],
         },
@@ -646,8 +636,8 @@ const en: Portfolio = {
           description:
             "Self-custody-style platform for managing crypto wallets, asset transfers, and swaps — not an exchange.",
           responsibilities: [
-            "Delivered a self-custody crypto wallet with multi-asset management, transfer, and swap functionality",
-            "Implemented real-time portfolio and transaction history tracking with Redux and React Query",
+            "Delivered a crypto wallet interface for multi-asset management, transfers, and swaps",
+            "Improved account visibility by adding real-time portfolio and transaction history tracking with Redux and React Query",
           ],
           stacks: ["nextjs", "react", "redux", "react-query", "tailwindcss"],
         },
